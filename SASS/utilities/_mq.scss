@@ -1,0 +1,56 @@
+/*media queries desktop*/
+@media screen and (min-width:600px){ 
+    /*estilos nav de BT desktop*/
+    .estilos-nav-bt{        
+        padding-left: 4.5rem; 
+        padding-top: 1.5rem; 
+        padding-bottom: 1.5rem; 
+        .nav-item{
+            padding-right: 0.9rem;
+        } 
+    }    
+    /*estilos del main desktop*/
+    h1{
+        margin-left: 1rem;        
+        margin-bottom: 2rem;        
+        width: 68rem;        
+        }
+    /*estilos de productos desktop*/
+    .productos-padre{
+        display:none;
+    }
+    .productos-padre-grid{
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr, 1fr, 2fr, 1fr;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    align-items: center;
+    font-size: 1.5rem; 
+    font-weight: bolder;
+    letter-spacing: 0.25rem;     
+    text-transform: uppercase; 
+    text-align: center;
+    margin-top: 2rem;
+        .productos-hijos-img-grid{
+            img{ 
+                width: 12rem; 
+                &:hover{ 
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .productos-hijos-txt-grid{    
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: $color-principal solid 0.1rem;           
+            &:hover{    
+                color: $color-principal;
+            } 
+        }
+    }     
+    /*estilos del footer desktop*/
+    footer{
+        text-align: left;      
+    }
+}

@@ -1,241 +1,178 @@
 /*reseteo del navegador*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /*body*/
-body{
-    font-family:'Roboto', sans-serif; 
-    background-color: white;  
-    }
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white; }
 
 /*header*/
-header{
-    background-color: white;
-    border-bottom: 0.2rem solid black;     
-    position: sticky;
-    top:0;
-    z-index:2;    
-}
-
-/*logo*/
-header img{    
+header {
+  background-color: white;
+  border-bottom: 0.2rem solid black;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  /*logo*/
+  /*estilos nav de BT*/ }
+  header img {
     padding-bottom: 1.5rem;
     padding-left: 6rem;
-    padding-top: 1.5rem;  
-}
-
-header img:hover{    
-    transform: scale(1.01); 
-}
-
-/*estilos nav de BT*/
-.estilos-nav-bt{
-    background-color: #FA781A;     
-    font-size: 0.8rem; 
-    font-weight: bold;     
-    letter-spacing: 0.25rem;     
-    text-transform: uppercase;    
-}
-
-.nav-link{
-    color:white;
-}
-
-.nav-link:hover{
-    color:black;
-}
+    padding-top: 1.5rem; }
+    header img:hover {
+      ransform: scale(1.01); }
+  header .estilos-nav-bt {
+    background-color: #FA781A;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase; }
+  header .nav-link {
+    color: white; }
+    header .nav-link:hover {
+      color: black; }
 
 /*estilos del main*/
-main{    
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1{   
+main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  main h1 {
     margin-top: 2rem;
-    padding-bottom:0.5rem;
-    border-bottom: 0.2rem solid #FA781A;  
-    font-weight: bold;  
-    } 
-
-p{
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid #FA781A;
+    font-weight: bold; }
+  main p {
     font-weight: bold;
     margin-left: 8.5rem;
     margin-bottom: 1rem;
     margin-right: 9rem;
-    margin-top:1rem;
-}
-
-/*estilos de productos*/
-
-.productos-padre{     
-    text-align: center; 
-    font-size: 1.5rem;    
-    font-weight: bolder;
-    letter-spacing: 0.25rem;     
-    text-transform: uppercase;     
-}
-
-.productos-hijos-img{   
-    padding-top: 1rem;      
-}
-
-.productos-hijos-img img{ 
-    height: 10rem; 
-}
-
-.productos-hijos-img img:hover{ 
-    transform: scale(1.1);
-}
-
-.productos-hijos-txt{    
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: #FA781A solid 0.1rem;   
-}
-
-.productos-hijos-txt:hover{    
-    color:#FA781A;
-}
-
-.productos-padre-grid{
-    display: none;
-}
+    margin-top: 1rem; }
 
 /*estilos de nosotros*/
-span{
-    font-weight: bolder;
-    font-style: italic;
-}
-#carouselExampleSlidesOnly img{    
-    width: 17rem;
-}
+span {
+  font-weight: bolder;
+  font-style: italic; }
+
+#carouselExampleSlidesOnly img {
+  width: 17rem; }
+
+/*estilos de productos*/
+.productos-padre {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase; }
+  .productos-padre .productos-hijos-img {
+    padding-top: 1rem; }
+    .productos-padre .productos-hijos-img img {
+      height: 10rem; }
+      .productos-padre .productos-hijos-img img:hover {
+        transform: scale(1.1); }
+  .productos-padre .productos-hijos-txt {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: #FA781A solid 0.1rem; }
+    .productos-padre .productos-hijos-txt:hover {
+      color: #FA781A; }
+
+.productos-padre-grid {
+  display: none; }
 
 /*estilos de servicios*/
-.servicios-padre{
-    margin-top: 2rem;
-}
-.servicios-padre ul li{
+.servicios-padre {
+  margin-top: 2rem; }
+  .servicios-padre ul li {
     font-weight: bolder;
+    text-transform: uppercase; }
+  .servicios-padre ul br {
+    display: none; }
+
+.servicios-hijos-barra {
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
+  .servicios-hijos-barra a {
+    background-color: #FA781A;
+    padding: 1rem;
     text-transform: uppercase;
-}
-
-br{
-    display: none;
-}
-
-.servicios-hijos-barra{
-    margin-top:1rem; 
-    margin-bottom:2rem;     
-}
-
-.servicios-hijos-barra a{   
-    background-color: #FA781A; 
-    padding: 1rem;   
-    text-transform: uppercase;
-    text-decoration: none; 
+    text-decoration: none;
     font-weight: bolder;
-    color: black;     
-    
-}
+    color: black; }
+    .servicios-hijos-barra a:hover {
+      background-color: black;
+      color: white; }
 
-.servicios-hijos-barra a:hover{     
-    background-color:black;   
-    color:white; 
-}
-
-.servicios-hijos-img{
-    border-top:#FA781A solid 0.1rem;    
-    padding:1rem;
-}
-
-.servicios-hijos-img img{
-    height: 12rem;    
-}
-
-.servicios-hijos-img img:hover{
-    transform: scale(1.1);  
-}
+.servicios-hijos-img {
+  border-top: #FA781A solid 0.1rem;
+  padding: 1rem; }
+  .servicios-hijos-img img {
+    height: 12rem; }
+    .servicios-hijos-img img:hover {
+      transform: scale(1.1); }
 
 /*footer*/
-footer{
-    background-color: black;       
-    border-top: 0.15rem solid #FA781A;  
-    margin-top: 2rem;  
-    padding: 2rem;  
-    text-align: center;      
-}
-
-/*texto del footer*/
-footer h3{
-    color: white;  
-    font-size: 0.6rem;   
-    letter-spacing:0.1rem;
-    font-weight: bold; 
-}
-
-/*link externo del footer*/
-footer h3 a{
-    color: grey;
-    text-decoration: none;   
-}
+footer {
+  background-color: black;
+  border-top: 0.15rem solid #FA781A;
+  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
+  /*texto del footer*/ }
+  footer h3 {
+    color: white;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    /*link externo del footer*/ }
+    footer h3 a {
+      color: grey;
+      text-decoration: none; }
 
 /*media queries desktop*/
-@media screen and (min-width:600px){ 
-    /*estilos nav de BT desktop*/
-    .estilos-nav-bt{        
-        padding-left: 4.5rem; 
-        padding-top: 1.5rem; 
-        padding-bottom: 1.5rem; 
-    }
-    .nav-item{
-        padding-right: 0.9rem;
-    } 
-    /*estilos del main desktop*/
-    h1{
-        margin-left: 1rem;        
-        margin-bottom: 2rem;        
-        width: 68rem;        
-        }
-    /*estilos de productos desktop*/
-    .productos-padre{
-        display:none;
-    }
-    .productos-padre-grid{
-    display: grid;    
+@media screen and (min-width: 600px) {
+  /*estilos nav de BT desktop*/
+  .estilos-nav-bt {
+    padding-left: 4.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
+    .estilos-nav-bt .nav-item {
+      padding-right: 0.9rem; }
+  /*estilos del main desktop*/
+  h1 {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    width: 68rem; }
+  /*estilos de productos desktop*/
+  .productos-padre {
+    display: none; }
+  .productos-padre-grid {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 2fr, 1fr, 2fr, 1fr;
     column-gap: 4rem;
     row-gap: 1rem;
     align-items: center;
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     font-weight: bolder;
-    letter-spacing: 0.25rem;     
-    text-transform: uppercase; 
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
     text-align: center;
-    margin-top: 2rem;
-    }     
-    .productos-hijos-img-grid img{ 
-        width: 12rem; 
-    }
-    .productos-hijos-img-grid img:hover{ 
-        transform: scale(1.1);
-    }
-    .productos-hijos-txt-grid{    
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: #FA781A solid 0.1rem;           
-    }
-    .productos-hijos-txt-grid:hover{    
-        color: #FA781A;
-    } 
-    /*estilos del footer desktop*/
-    footer{
-        text-align: left;      
-    }
-    }
+    margin-top: 2rem; }
+    .productos-padre-grid .productos-hijos-img-grid img {
+      width: 12rem; }
+      .productos-padre-grid .productos-hijos-img-grid img:hover {
+        transform: scale(1.1); }
+    .productos-padre-grid .productos-hijos-txt-grid {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: #FA781A solid 0.1rem; }
+      .productos-padre-grid .productos-hijos-txt-grid:hover {
+        color: #FA781A; }
+  /*estilos del footer desktop*/
+  footer {
+    text-align: left; } }

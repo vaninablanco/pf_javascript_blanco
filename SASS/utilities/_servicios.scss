@@ -1,0 +1,39 @@
+/*estilos de servicios*/
+.servicios-padre{
+    margin-top: 2rem;
+    ul{
+        li{
+        font-weight: bolder;
+        text-transform: uppercase;
+        }
+        br{
+            display: none;
+        }
+    }
+}
+.servicios-hijos-barra{
+    margin-top:1rem; 
+    margin-bottom:2rem; 
+    a{   
+        background-color: $color-principal; 
+        padding: 1rem;   
+        text-transform: uppercase;
+        text-decoration: none; 
+        font-weight: bolder;
+        color: $color-secundario; 
+        &:hover{     
+            background-color:$color-secundario;   
+            color:$color-fondo; 
+        }             
+    }
+}    
+.servicios-hijos-img{
+    border-top:$color-principal solid 0.1rem;    
+    padding:1rem;
+    img{
+        height: 12rem; 
+        &:hover{
+            transform: scale(1.1);  
+        }  
+    }
+}

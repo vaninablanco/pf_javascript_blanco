@@ -1,0 +1,24 @@
+/*footer*/
+footer{
+    background-color: $color-secundario;       
+    border-top: 0.15rem solid $color-principal;  
+    margin-top: 2rem;  
+    padding: 2rem;  
+    text-align: center; 
+    /*texto del footer*/
+    h3{
+    color: $color-fondo;  
+    font-size: 0.6rem;   
+    letter-spacing:0.1rem;
+    font-weight: bold; 
+        /*link externo del footer*/
+        a{
+        color: grey;
+        text-decoration: none;   
+        }
+    }     
+}
+
+
+
+
