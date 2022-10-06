@@ -1,11 +1,10 @@
 /*estilos de productos*/
 
-.productos-padre{     
+.productos-padre{   
+    @extend %tipografia;   
     text-align: center; 
     font-size: 1.5rem;    
-    font-weight: bolder;
-    letter-spacing: 0.25rem;     
-    text-transform: uppercase; 
+    
     .productos-hijos-img{   
         padding-top: 1rem; 
         img{ 
@@ -15,9 +14,9 @@
             }
         } 
     .productos-hijos-txt{    
+        @include bordes-inferiores(0.1rem, solid, $color-principal); 
         padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: $color-principal solid 0.1rem;  
+        padding-bottom: 1rem;          
         &:hover{    
             color:$color-principal;
             }

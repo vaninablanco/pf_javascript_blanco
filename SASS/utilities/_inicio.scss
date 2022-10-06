@@ -1,0 +1,45 @@
+/*estilos de inicio*/
+main{
+    .inicio-portada{        
+        a{
+            img{                
+                width:50rem;
+            }
+        }
+        #inicio-imagen-txt{
+            text-transform: uppercase; 
+            font-family:Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight:bolder;
+            font-size: 2rem;            
+            position: relative;
+            opacity: 50%;
+            top: -270px; 
+            text-align: center;           
+        }
+    }
+    .inicio-padre{   
+        @extend %tipografia;   
+        text-align: center; 
+        font-size: 1.5rem;  
+        .inicio-hijos-img{  
+            padding-top: 1rem; 
+            img{ 
+                height: 10rem; 
+                &:hover{transform: scale(1.1);
+                }
+            }      
+        } 
+        .inicio-hijos-txt{    
+            @include bordes-inferiores(0.1rem, solid, $color-principal); 
+            padding-top: 1rem;
+            padding-bottom: 1rem;          
+            &:hover{    
+                color:$color-principal;
+            }
+        }    
+    }    
+    .inicio-padre-grid{
+        display: none;
+    }
+}

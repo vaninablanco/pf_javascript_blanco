@@ -1,26 +1,24 @@
     /*header*/
     header{
-        background-color: $color-fondo;
-        border-bottom: 0.2rem solid $color-secundario;     
+        @include bordes-inferiores(0.2rem, solid, $color-secundario); 
+        background-color: $color-fondo;                    
         position: sticky;
         top:0;
         z-index:2;          
             /*logo*/
             img{    
             padding-bottom: 1.5rem;
-            padding-left: 6rem;
-            padding-top: 1.5rem;  
+            padding-top: 1.5rem;         
+            padding-left: 2.5rem;             
                 &:hover{
-                    ransform: scale(1.01);
+                    transform: scale(1.01);
                 }
             }    
             /*estilos nav de BT*/
             .estilos-nav-bt{
+            @extend %tipografia;
             background-color: $color-principal;     
-            font-size: 0.8rem; 
-            font-weight: bold;     
-            letter-spacing: 0.25rem;     
-            text-transform: uppercase;    
+            font-size: 0.8rem;               
             }    
             .nav-link{
                 color:$color-fondo;

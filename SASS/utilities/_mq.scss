@@ -1,10 +1,10 @@
 /*media queries desktop*/
 @media screen and (min-width:600px){ 
     /*estilos nav de BT desktop*/
-    .estilos-nav-bt{        
-        padding-left: 4.5rem; 
-        padding-top: 1.5rem; 
-        padding-bottom: 1.5rem; 
+    .estilos-nav-bt{    
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+        padding-left: 4.5rem;        
         .nav-item{
             padding-right: 0.9rem;
         } 
@@ -15,6 +15,62 @@
         margin-bottom: 2rem;        
         width: 68rem;        
         }
+    /*estilos de inicio desktop*/
+    main{
+    .inicio-portada{        
+        a{
+            img{                
+                width: auto;
+                margin-bottom:0px;
+            }
+        }
+        #inicio-imagen-txt{
+            text-transform: uppercase; 
+            font-family:Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight:bolder;
+            font-size: 80px;  
+            margin-right: 50px;          
+            position: relative;
+            opacity: 50%;
+            top: -420px; 
+            left: 100px;     
+            text-align: left;     
+            }
+    }    
+    .inicio-padre{
+        display:none;
+    }
+    .inicio-padre-grid{                
+        display: grid;    
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr, 1fr;
+        column-gap: 4rem;
+        row-gap: 1rem;
+        align-items: center;
+        font-size: 1.5rem; 
+        font-weight: bolder;
+        letter-spacing: 0.25rem;     
+        text-transform: uppercase; 
+        text-align: center;            
+        .inicio-hijos-img-grid{
+            img{ 
+                width: 12rem; 
+                &:hover{ 
+                transform: scale(1.1);
+                }
+            }
+        }
+        .inicio-hijos-txt-grid{    
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: $color-principal solid 0.1rem;           
+            &:hover{    
+                color: $color-principal;
+            } 
+        }
+    }   
+    }   
     /*estilos de productos desktop*/
     .productos-padre{
         display:none;
@@ -48,7 +104,17 @@
                 color: $color-principal;
             } 
         }
-    }     
+    }    
+    /*estilos de contacto desktop*/
+    .contacto-contenedor{
+        width:50rem;
+        .contacto-mapa{
+            display:none;
+        }
+        .contacto-mapa-desktop{
+            display: flex;
+        }
+    }
     /*estilos del footer desktop*/
     footer{
         text-align: left;      

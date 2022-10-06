@@ -1,0 +1,49 @@
+/*estilos de contacto*/
+
+.contacto-contenedor{
+    width:20rem;  
+    .contacto-formulario{  
+        margin-top: 2rem;      
+        padding: 1rem; 
+        background-color: $color-principal;
+        form{
+            ul{
+                li{
+                    list-style-type:none;
+                    label{
+                        font-weight: bolder;
+                        letter-spacing: 0.1rem;
+                        color:$color-fondo;
+                        font-size:medium;
+                    }                      
+                }        
+            }
+        }    
+    }
+    .contacto-direccion{  
+        margin-top: 2rem;
+        ul{
+            li{  
+                list-style-type: none;                         
+                font-weight: bolder;
+                font-size:medium;
+                &:before{
+                    content: "\00BB \0020"; 
+                }     
+                a{
+                    text-decoration: none;
+                    color:$color-principal;
+                }           
+                span{                    
+                    color:$color-principal;                                       
+                }
+            }
+        }
+    }
+    .contenedor-mapa{
+        margin-top: 2rem; 
+    }
+    .contacto-mapa-desktop{
+        display:none;
+    }
+}

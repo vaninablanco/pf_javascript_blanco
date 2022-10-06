@@ -1,3 +1,8 @@
+header .estilos-nav-bt, main .inicio-padre, .productos-padre {
+  font-weight: bolder;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase; }
+
 /*reseteo del navegador*/
 * {
   margin: 0;
@@ -11,8 +16,10 @@ body {
 
 /*header*/
 header {
+  border-bottom-width: 0.2rem;
+  border-bottom-style: solid;
+  border-bottom-color: black;
   background-color: white;
-  border-bottom: 0.2rem solid black;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -20,16 +27,13 @@ header {
   /*estilos nav de BT*/ }
   header img {
     padding-bottom: 1.5rem;
-    padding-left: 6rem;
-    padding-top: 1.5rem; }
+    padding-top: 1.5rem;
+    padding-left: 2.5rem; }
     header img:hover {
-      ransform: scale(1.01); }
+      transform: scale(1.01); }
   header .estilos-nav-bt {
     background-color: #FA781A;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 0.25rem;
-    text-transform: uppercase; }
+    font-size: 0.8rem; }
   header .nav-link {
     color: white; }
     header .nav-link:hover {
@@ -42,9 +46,11 @@ main {
   flex-direction: column;
   align-items: center; }
   main h1 {
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #FA781A;
     margin-top: 2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 0.2rem solid #FA781A;
     font-weight: bold; }
   main p {
     font-weight: bold;
@@ -53,10 +59,45 @@ main {
     margin-right: 9rem;
     margin-top: 1rem; }
 
+/*estilos de inicio*/
+main .inicio-portada a img {
+  width: 50rem; }
+
+main .inicio-portada #inicio-imagen-txt {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-size: 2rem;
+  position: relative;
+  opacity: 50%;
+  top: -270px;
+  text-align: center; }
+
+main .inicio-padre {
+  text-align: center;
+  font-size: 1.5rem; }
+  main .inicio-padre .inicio-hijos-img {
+    padding-top: 1rem; }
+    main .inicio-padre .inicio-hijos-img img {
+      height: 10rem; }
+      main .inicio-padre .inicio-hijos-img img:hover {
+        transform: scale(1.1); }
+  main .inicio-padre .inicio-hijos-txt {
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #FA781A;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    main .inicio-padre .inicio-hijos-txt:hover {
+      color: #FA781A; }
+
+main .inicio-padre-grid {
+  display: none; }
+
 /*estilos de nosotros*/
 span {
-  font-weight: bolder;
-  font-style: italic; }
+  color: #FA781A; }
 
 #carouselExampleSlidesOnly img {
   width: 17rem; }
@@ -64,10 +105,7 @@ span {
 /*estilos de productos*/
 .productos-padre {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  letter-spacing: 0.25rem;
-  text-transform: uppercase; }
+  font-size: 1.5rem; }
   .productos-padre .productos-hijos-img {
     padding-top: 1rem; }
     .productos-padre .productos-hijos-img img {
@@ -75,9 +113,11 @@ span {
       .productos-padre .productos-hijos-img img:hover {
         transform: scale(1.1); }
   .productos-padre .productos-hijos-txt {
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: #FA781A;
     padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: #FA781A solid 0.1rem; }
+    padding-bottom: 1rem; }
     .productos-padre .productos-hijos-txt:hover {
       color: #FA781A; }
 
@@ -115,6 +155,38 @@ span {
     .servicios-hijos-img img:hover {
       transform: scale(1.1); }
 
+/*estilos de contacto*/
+.contacto-contenedor {
+  width: 20rem; }
+  .contacto-contenedor .contacto-formulario {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #FA781A; }
+    .contacto-contenedor .contacto-formulario form ul li {
+      list-style-type: none; }
+      .contacto-contenedor .contacto-formulario form ul li label {
+        font-weight: bolder;
+        letter-spacing: 0.1rem;
+        color: white;
+        font-size: medium; }
+  .contacto-contenedor .contacto-direccion {
+    margin-top: 2rem; }
+    .contacto-contenedor .contacto-direccion ul li {
+      list-style-type: none;
+      font-weight: bolder;
+      font-size: medium; }
+      .contacto-contenedor .contacto-direccion ul li:before {
+        content: "\00BB \0020"; }
+      .contacto-contenedor .contacto-direccion ul li a {
+        text-decoration: none;
+        color: #FA781A; }
+      .contacto-contenedor .contacto-direccion ul li span {
+        color: #FA781A; }
+  .contacto-contenedor .contenedor-mapa {
+    margin-top: 2rem; }
+  .contacto-contenedor .contacto-mapa-desktop {
+    display: none; }
+
 /*footer*/
 footer {
   background-color: black;
@@ -137,9 +209,9 @@ footer {
 @media screen and (min-width: 600px) {
   /*estilos nav de BT desktop*/
   .estilos-nav-bt {
-    padding-left: 4.5rem;
+    padding-bottom: 1.5rem;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem; }
+    padding-left: 4.5rem; }
     .estilos-nav-bt .nav-item {
       padding-right: 0.9rem; }
   /*estilos del main desktop*/
@@ -147,6 +219,46 @@ footer {
     margin-left: 1rem;
     margin-bottom: 2rem;
     width: 68rem; }
+  /*estilos de inicio desktop*/
+  main .inicio-portada a img {
+    width: auto;
+    margin-bottom: 0px; }
+  main .inicio-portada #inicio-imagen-txt {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 80px;
+    margin-right: 50px;
+    position: relative;
+    opacity: 50%;
+    top: -420px;
+    left: 100px;
+    text-align: left; }
+  main .inicio-padre {
+    display: none; }
+  main .inicio-padre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr, 1fr;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    text-align: center; }
+    main .inicio-padre-grid .inicio-hijos-img-grid img {
+      width: 12rem; }
+      main .inicio-padre-grid .inicio-hijos-img-grid img:hover {
+        transform: scale(1.1); }
+    main .inicio-padre-grid .inicio-hijos-txt-grid {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: #FA781A solid 0.1rem; }
+      main .inicio-padre-grid .inicio-hijos-txt-grid:hover {
+        color: #FA781A; }
   /*estilos de productos desktop*/
   .productos-padre {
     display: none; }
@@ -173,6 +285,13 @@ footer {
       border-bottom: #FA781A solid 0.1rem; }
       .productos-padre-grid .productos-hijos-txt-grid:hover {
         color: #FA781A; }
+  /*estilos de contacto desktop*/
+  .contacto-contenedor {
+    width: 50rem; }
+    .contacto-contenedor .contacto-mapa {
+      display: none; }
+    .contacto-contenedor .contacto-mapa-desktop {
+      display: flex; }
   /*estilos del footer desktop*/
   footer {
     text-align: left; } }
