@@ -19,18 +19,38 @@ header {
   border-bottom-width: 0.2rem;
   border-bottom-style: solid;
   border-bottom-color: black;
-  background-color: white;
+  background-color: black;
   position: sticky;
   top: 0;
   z-index: 2;
-  /*logo*/
+  /*logo y minimenu*/
   /*estilos nav de BT*/ }
-  header img {
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    padding-left: 2.5rem; }
-    header img:hover {
-      transform: scale(1.01); }
+  header .header-logo-minimenu {
+    display: flex;
+    height: 5rem;
+    /*logo*/
+    /*minimenu*/ }
+    header .header-logo-minimenu .header-logo img {
+      height: 2rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem; }
+      header .header-logo-minimenu .header-logo img:hover {
+        transform: scale(1.05); }
+    header .header-logo-minimenu .header-minimenu {
+      margin-top: 1.5rem; }
+      header .header-logo-minimenu .header-minimenu nav ul li {
+        list-style-type: none; }
+        header .header-logo-minimenu .header-minimenu nav ul li img {
+          height: 0.7rem;
+          margin-right: 0.2rem; }
+        header .header-logo-minimenu .header-minimenu nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 70%;
+          text-transform: uppercase; }
+          header .header-logo-minimenu .header-minimenu nav ul li a:hover {
+            color: #FA781A; }
   header .estilos-nav-bt {
     background-color: #FA781A;
     font-size: 0.8rem; }
@@ -195,18 +215,18 @@ footer {
   padding: 2rem;
   text-align: center;
   /*texto del footer*/ }
-  footer h3 {
+  footer h2 {
     color: white;
     font-size: 0.6rem;
     letter-spacing: 0.1rem;
     font-weight: bold;
     /*link externo del footer*/ }
-    footer h3 a {
+    footer h2 a {
       color: grey;
       text-decoration: none; }
 
 /*media queries desktop*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 576px) {
   /*estilos nav de BT desktop*/
   .estilos-nav-bt {
     padding-bottom: 1.5rem;

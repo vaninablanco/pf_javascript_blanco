@@ -1,29 +1,61 @@
-    /*header*/
-    header{
-        @include bordes-inferiores(0.2rem, solid, $color-secundario); 
-        background-color: $color-fondo;                    
-        position: sticky;
-        top:0;
-        z-index:2;          
-            /*logo*/
-            img{    
-            padding-bottom: 1.5rem;
-            padding-top: 1.5rem;         
-            padding-left: 2.5rem;             
+/*header*/
+header{
+    @include bordes-inferiores(0.2rem, solid, $color-secundario); 
+    background-color: $color-secundario;                    
+    position: sticky;
+    top:0;
+    z-index:2;          
+    /*logo y minimenu*/
+    .header-logo-minimenu{        
+        display:flex;         
+        height: 5rem;    
+        /*logo*/                                          
+        .header-logo{             
+            img{   
+                height: 2rem; 
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+                margin-top:2rem; 
                 &:hover{
-                    transform: scale(1.01);
-                }
-            }    
-            /*estilos nav de BT*/
-            .estilos-nav-bt{
-            @extend %tipografia;
-            background-color: $color-principal;     
-            font-size: 0.8rem;               
-            }    
-            .nav-link{
-                color:$color-fondo;
-                    &:hover{
-                        color:$color-secundario;
+                    transform: scale(1.05);
+                } 
+            } 
+        } 
+        /*minimenu*/              
+        .header-minimenu{              
+            margin-top:1.5rem;                                                 
+            nav{
+                ul{  
+                    li {   
+                        list-style-type: none;                                                
+                        img{                             
+                            height: 0.7rem; 
+                            margin-right: 0.2rem;
+                        }  
+                        a{
+                            color: $color-fondo;
+                            text-decoration: none;  
+                            font-size: 70%; 
+                            text-transform: uppercase; 
+                            &:hover{
+                                color:$color-principal;
+                            }  
+                        }
                     }
-            }
+                }
+            }            
         }
+    }              
+    /*estilos nav de BT*/
+    .estilos-nav-bt{
+        @extend %tipografia;
+        background-color: $color-principal;     
+        font-size: 0.8rem;               
+        }    
+    .nav-link{
+        color:$color-fondo;
+        &:hover{
+            color:$color-secundario;
+        }
+    }
+}
