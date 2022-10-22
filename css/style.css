@@ -81,7 +81,7 @@ main {
 
 /*estilos de inicio*/
 main .inicio-portada a img {
-  width: 50rem; }
+  width: 30rem; }
 
 main .inicio-portada #inicio-imagen-txt {
   text-transform: uppercase;
