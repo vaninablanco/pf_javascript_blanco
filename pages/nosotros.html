@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-<!-- CSS BT -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS BT -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- título -->
@@ -20,7 +20,27 @@
 </head>
 <body>    
     <header>
-        <a href="../index.html"><img src="../img/header_logo.png" alt="logo de bicicletería scarano"></a> 
+        <!-- logo y mini menú -->
+        <div class="header-logo-minimenu">  
+            <div class="header-logo">
+                <a href="index.html"><img src="../img/header_mobile_logo_blanco.png" alt="Ir al inicio de Bicicletería Scarano"></a> 
+            </div>
+            <div class="header-minimenu">
+                <nav>
+                    <ul>
+                        <li> 
+                            <img src="../img/header_mobile_carrito_naranja.png" alt="ícono carrito">
+                            <a href="https://wa.me/5492804669943" target="_blank">Cómo comprar</a>
+                        </li>
+                        <li>
+                            <img src="../img/header_mobile_ubicacion_naranja.png" alt="ícono ubicación">
+                            <a href="pages/contacto.html">Dónde estamos</a>
+                        </li>
+                    </ul>
+                </nav>  
+            </div>     
+        </div>  
+        <!-- menú hamburguesa --> 
         <nav class="navbar navbar-expand-lg estilos-nav-bt">
             <div class="container-fluid">
                 <!-- icono hamburguesa BT -->
@@ -41,29 +61,38 @@
         </nav>
     </header>        
     <main>
-        <div class="titulo"><h1>Esta es nuestra historia</h1></div>        
-        <p><span>Bicicletería Scarano</span> nace como un pequeño taller revestido de chapa y hasta con un gallinero en 1944, donde Luis Scarano, tío del fundador del futuro taller de bicicletas, realizaba arreglos de todo tipo, desde electrodomésticos hasta bicicletas. Por ese entonces, Trelew era un prometedor pueblo del sur.</p>
-
-        <!-- carrousel de BT -->            
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active"><img src="../img/nosotros_carrousel_01.jpg" alt="foto antigua de la bicicleteria"></div>
-                <div class="carousel-item"><img src="../img/nosotros_carrousel_02.jpg" alt="foto antigua de la bicicleteria"></div>
-                <div class="carousel-item"><img src="../img/nosotros_carrousel_03.jpg" alt="foto antigua de la bicicleteria"></div>
-                <div class="carousel-item"><img src="../img/nosotros_carrousel_04.jpg" alt="foto antigua de la bicicleteria"></div>
+        <!-- título pral -->
+        <div class="titulo">
+            <h1>Esta es nuestra historia</h1>
+        </div>
+        <!-- nosotros historia carrousel -->
+        <div class="nosotros-txt-img">
+            <!-- txt 1 -->
+            <div class="nosotros-txt">
+                <p><span>Bicicletería Scarano</span> nace como un pequeño taller revestido de chapa y hasta con un gallinero en <b>1944</b>, donde Luis Scarano, tío del fundador del futuro taller de bicicletas, realizaba arreglos de todo tipo, desde electrodomésticos hasta bicicletas. Por ese entonces, Trelew era un prometedor pueblo del sur.</p>
             </div>
+            <!-- carrousel de BT -->                 
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="../img/nosotros_carrousel_01.jpg" alt="foto antigua de la bicicletería"></div>
+                    <div class="carousel-item"><img src="../img/nosotros_carrousel_02.jpg" alt="foto antigua de la bicicletería"></div>
+                    <div class="carousel-item"><img src="../img/nosotros_carrousel_03.jpg" alt="foto antigua de la bicicletería"></div>
+                    <div class="carousel-item"><img src="../img/nosotros_carrousel_04.jpg" alt="foto antigua de la bicicletería"></div>
+                </div>
+            </div>            
+            <!-- txt 1 -->
+            <div class="nosotros-txt">
+                <p>Con el correr de los años Nivardo Washington Scarano, abuelo del actual dueño, comienza a hacerse cargo del lugar y a traer productos novedosos para vender: juguetes, kartings, accesorios deportivos y por supuesto todo tipo de bicicletas.</p>
+            </div>
+            <!-- carrousel de BT -->        
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="../img/nosotros_carrousel_05.jpg" alt="foto antigua de la bicicleteria"></div>
+                    <div class="carousel-item"><img src="../img/nosotros_carrousel_06.jpg" alt="foto antigua de la bicicletería"></div>
+                    <div class="carousel-item"><img src="../img/nosotros_carrousel_07.jpg" alt="foto antigua de la bicicletería"></div>
+                </div>
+            </div>   
         </div>            
-
-        <p>Con el correr de los años Nivardo Washington Scarano, abuelo del actual dueño, comienza a hacerse cargo del lugar y a traer productos novedosos para vender: juguetes, kartings, accesorios deportivos y por supuesto todo tipo de bicicletas.</p>
-
-        <!-- carrousel de BT -->        
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active"><img src="../img/nosotros_carrousel_05.jpg" alt="foto antigua de la bicicleteria"></div>
-                <div class="carousel-item"><img src="../img/nosotros_carrousel_06.jpg" alt="foto antigua de la bicicleteria"></div>
-                <div class="carousel-item"><img src="../img/nosotros_carrousel_07.jpg" alt="foto antigua de la bicicleteria"></div>
-            </div>
-        </div>               
     </main>
     <footer>
         <h2>Bicicletería Scarano  © 2022 • Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores"target="_blank">ingrese aquí</a>

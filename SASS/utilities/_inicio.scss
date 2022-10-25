@@ -1,45 +1,60 @@
 /*estilos de inicio*/
 main{
-    .inicio-portada{        
-        a{
+    .inicio-portada{ 
+        display: flex;      
+        flex-wrap: wrap;           
+        a{        
+            background-color: $color-secundario;    
+            text-decoration: none; 
             img{                
-                width:30rem;
+                width:100%;                
+            }        
+            .inicio-portada-txt{                
+                background-color: $color-secundario;   
+                position: relative;
+                top: -1rem;                
+                h1{
+                    text-transform: uppercase; 
+                    font-family:Arial, Helvetica, sans-serif;
+                    color: $color-fondo;
+                    font-weight:bolder;
+                    font-size: 2rem;        
+                    text-align: center;                                                     
+                }          
             }
         }
-        #inicio-imagen-txt{
-            text-transform: uppercase; 
-            font-family:Arial, Helvetica, sans-serif;
-            color: white;
-            font-weight:bolder;
-            font-size: 2rem;            
-            position: relative;
-            opacity: 50%;
-            top: -270px; 
-            text-align: center;           
-        }
     }
-    .inicio-padre{   
-        @extend %tipografia;   
-        text-align: center; 
-        font-size: 1.5rem;  
-        .inicio-hijos-img{  
-            padding-top: 1rem; 
-            img{ 
-                height: 10rem; 
-                &:hover{transform: scale(1.1);
+    /*inicio accesos*/
+    .inicio-accesos{                      
+        display: flex;  
+        flex-direction: column;         
+        row-gap: 2rem;   
+        margin-bottom: 5rem; /*para que no se mueva footer*/     
+        /* inicio cards*/    
+        .inicio-card{
+            border: 1px solid $color-filetes;            
+            border-radius: 0.5rem;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: $color-filetes 0px 2px 16px 0px;
+                border:0;                
+            }
+            a{
+                text-decoration: none; 
+                img{            
+                    height: 15rem;
+                    padding:0.5rem;
                 }
-            }      
-        } 
-        .inicio-hijos-txt{    
-            @include bordes-inferiores(0.1rem, solid, $color-principal); 
-            padding-top: 1rem;
-            padding-bottom: 1rem;          
-            &:hover{    
-                color:$color-principal;
-            }
-        }    
+                .inicio-card-txt{                                      
+                    h3{
+                        @extend %tipografia;                         
+                        font-size: 1.5rem;                        
+                        text-align: center;                                                
+                        padding-bottom: 1rem; 
+                        color: $color-principal;                                               
+                    }                    
+                }
+            } 
+        }                
     }    
-    .inicio-padre-grid{
-        display: none;
-    }
 }

@@ -17,50 +17,79 @@
         }
     /*estilos de inicio desktop*/
     main{
-    .inicio-portada{        
-        a{
-            img{                
-                width: auto;
-                margin-bottom:0px;
-            }
-        }
-        #inicio-imagen-txt{
-            text-transform: uppercase; 
-            font-family:Arial, Helvetica, sans-serif;
-            color: white;
-            font-weight:bolder;
-            font-size: 80px;  
-            margin-right: 50px;          
-            position: relative;
-            opacity: 50%;
-            top: -420px; 
-            left: 100px;     
-            text-align: left;     
-            }
-    }    
-    .inicio-padre{
-        display:none;
-    }
-    .inicio-padre-grid{                
-        display: grid;    
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 2fr, 1fr;
-        column-gap: 4rem;
-        row-gap: 1rem;
-        align-items: center;
-        font-size: 1.5rem; 
-        font-weight: bolder;
-        letter-spacing: 0.25rem;     
-        text-transform: uppercase; 
-        text-align: center;            
-        .inicio-hijos-img-grid{
-            img{ 
-                width: 12rem; 
-                &:hover{ 
-                transform: scale(1.1);
+        .inicio-portada{        
+            a{
+                img{                
+                    width: auto;
+                    margin-bottom:0px;
                 }
             }
+            #inicio-imagen-txt{
+                text-transform: uppercase; 
+                font-family:Arial, Helvetica, sans-serif;
+                color: white;
+                font-weight:bolder;
+                font-size: 80px;  
+                margin-right: 50px;          
+                position: relative;
+                opacity: 50%;
+                top: -420px; 
+                left: 100px;     
+                text-align: left;     
+                }
+        }   
+        /*estilos de nosotros desktop*/ 
+        .nosotros-txt-img{
+            display:flex; 
+            flex-direction: column;   
+            align-items: center;    
+            .nosotros-txt{        
+                p{            
+                    width: 70%;
+                    margin-left: 15%;  
+                    span{
+                        font-variant: small-caps;
+                        font-weight: bold;
+                        color: $color-principal;
+                    }          
+                }
+            }
+            #carouselExampleSlidesOnly{
+                margin-left: 15%;        
+                .carousel-inner {            
+                    .carousel-item {
+                        img{
+                            width:80%;
+                        }
+                    }
+                }        
+            }
         }
+        /*fin estilos nosotros desktop*/
+
+        .inicio-padre{
+            display:none;
+        }
+        .inicio-padre-grid{                
+            display: grid;    
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 2fr, 1fr;
+            column-gap: 4rem;
+            row-gap: 1rem;
+            align-items: center;
+            font-size: 1.5rem; 
+            font-weight: bolder;
+            letter-spacing: 0.25rem;     
+            text-transform: uppercase; 
+            text-align: center;            
+            .inicio-hijos-img-grid{
+                img{ 
+                    width: 12rem; 
+                    &:hover{ 
+                    transform: scale(1.1);
+                    }
+                }
+            }
         .inicio-hijos-txt-grid{    
             padding-top: 1rem;
             padding-bottom: 1rem;

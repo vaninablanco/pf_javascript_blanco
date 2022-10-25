@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-<!-- CSS BT -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS BT -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <!-- título -->
@@ -20,7 +20,27 @@
 </head>
 <body>    
     <header>
-        <a href="../index.html"><img src="../img/header_logo.png" alt="logo de bicicletería scarano"></a> 
+                <!-- logo y mini menú -->
+                <div class="header-logo-minimenu">  
+                    <div class="header-logo">
+                        <a href="index.html"><img src="../img/header_mobile_logo_blanco.png" alt="Ir al inicio de Bicicletería Scarano"></a> 
+                    </div>
+                    <div class="header-minimenu">
+                        <nav>
+                            <ul>
+                                <li> 
+                                    <img src="../img/header_mobile_carrito_naranja.png" alt="ícono carrito">
+                                    <a href="https://wa.me/5492804669943" target="_blank">Cómo comprar</a>
+                                </li>
+                                <li>
+                                    <img src="../img/header_mobile_ubicacion_naranja.png" alt="ícono ubicación">
+                                    <a href="pages/contacto.html">Dónde estamos</a>
+                                </li>
+                            </ul>
+                        </nav>  
+                    </div>     
+                </div>  
+                <!-- menú hamburguesa --> 
         <nav class="navbar navbar-expand-lg estilos-nav-bt">
             <div class="container-fluid">
                 <!-- icono hamburguesa BT -->

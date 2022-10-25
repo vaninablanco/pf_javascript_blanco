@@ -1,7 +1,27 @@
 /*estilos de nosotros*/
-span{
-    color:$color-principal;   
-}
-#carouselExampleSlidesOnly img{    
-    width: 17rem;
+.nosotros-txt-img{
+    display:flex; 
+    flex-direction: column;   
+    align-items: center;    
+    .nosotros-txt{        
+        p{            
+            width: 70%;
+            margin-left: 15%;  
+            span{
+                font-variant: small-caps;
+                font-weight: bold;
+                color: $color-principal;
+            }          
+        }
+    }
+    #carouselExampleSlidesOnly{
+        margin-left: 15%;        
+        .carousel-inner {            
+            .carousel-item {
+                img{
+                    width:80%;
+                }
+            }
+        }        
+    }
 }

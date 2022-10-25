@@ -7,11 +7,9 @@
         h1{   
             @include bordes-inferiores(0.2rem, solid, $color-principal); 
             margin-top: 2rem;
-            padding-bottom:0.5rem;            
-            font-weight: bold;  
+            padding-bottom:0.5rem;          
             }    
-            p{
-                font-weight: bold;
+            p{                
                 margin-left: 8.5rem;
                 margin-bottom: 1rem;
                 margin-right: 9rem;
