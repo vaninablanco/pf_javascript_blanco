@@ -38,9 +38,18 @@ header {
       width: 62%; }
       header .header-logo-minimenu .header-logo img {
         height: 3.5rem;
-        margin-left: 1rem; }
+        margin-left: 1rem;
+        animation: animacion-logo;
+        animation-duration: 0.5s;
+        position: relative; }
+
+@keyframes animacion-logo {
+  0% {
+    bottom: 6rem; }
+  100% {
+    bottom: 0; } }
         header .header-logo-minimenu .header-logo img:hover {
-          transform: scale(1.05);
+          transform: scale(1.025);
           opacity: 50%; }
     header .header-logo-minimenu .header-minimenu {
       display: flex;
@@ -49,18 +58,30 @@ header {
       width: 38%;
       align-items: flex-end;
       margin-right: 1rem; }
-      header .header-logo-minimenu .header-minimenu .header-minimenu-enlace img {
-        height: 0.7rem;
-        margin-right: 0.1rem;
-        justify-content: start; }
-      header .header-logo-minimenu .header-minimenu .header-minimenu-enlace a {
-        color: white;
-        text-decoration: none;
-        font-size: 70%;
-        text-transform: uppercase; }
-        header .header-logo-minimenu .header-minimenu .header-minimenu-enlace a:hover {
-          color: #FA781A;
+      header .header-logo-minimenu .header-minimenu .header-minimenu-enlace {
+        animation: animacion-iconos;
+        animation-duration: 0.5s;
+        position: relative; }
+
+@keyframes animacion-iconos {
+  0% {
+    bottom: 6rem;
+    opacity: 5%; }
+  100% {
+    bottom: 0;
+    opacity: 100%; } }
+        header .header-logo-minimenu .header-minimenu .header-minimenu-enlace img {
+          height: 0.7rem;
+          margin-right: 0.1rem;
           justify-content: start; }
+        header .header-logo-minimenu .header-minimenu .header-minimenu-enlace a {
+          color: white;
+          text-decoration: none;
+          font-size: 70%;
+          text-transform: uppercase; }
+          header .header-logo-minimenu .header-minimenu .header-minimenu-enlace a:hover {
+            color: #FA781A;
+            justify-content: start; }
   header .estilos-nav-bt {
     background-color: #FA781A;
     font-size: 0.8rem; }
@@ -131,20 +152,20 @@ main {
           color: #FA781A; }
 
 /*estilos de nosotros*/
-.nosotros-txt-img {
+main .nosotros-txt-img {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .nosotros-txt-img .nosotros-txt p {
-    width: 70%;
-    margin-left: 15%; }
-    .nosotros-txt-img .nosotros-txt p span {
-      font-variant: small-caps;
+  align-items: center;
+  row-gap: 1rem; }
+  main .nosotros-txt-img .nosotros-txt p {
+    width: 80%;
+    margin-left: 10%; }
+    main .nosotros-txt-img .nosotros-txt p span {
       font-weight: bold;
       color: #FA781A; }
-  .nosotros-txt-img #carouselExampleSlidesOnly {
+  main .nosotros-txt-img #carouselExampleSlidesOnly {
     margin-left: 15%; }
-    .nosotros-txt-img #carouselExampleSlidesOnly .carousel-inner .carousel-item img {
+    main .nosotros-txt-img #carouselExampleSlidesOnly .carousel-inner .carousel-item img {
       width: 80%; }
 
 /*estilos de productos*/
@@ -159,7 +180,18 @@ main .productos-accesos {
     border-bottom-width: 0.15rem;
     border-bottom-style: solid;
     border-bottom-color: #FA781A;
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    animation: animacion-productos;
+    animation-duration: 2s;
+    position: relative; }
+
+@keyframes animacion-productos {
+  0% {
+    top: 6rem;
+    opacity: 5%; }
+  100% {
+    top: 0;
+    opacity: 100%; } }
     main .productos-accesos .productos-card:hover {
       transform: scale(1.05);
       box-shadow: silver 0px 2px 16px 0px;
@@ -270,9 +302,8 @@ footer {
   /* ↓↓↓ inicio main tablet ↓↓↓ */
   main {
     /*main*/
-    /*productos*/
-    /*estilos de nosotros desktop*/
-    /*fin estilos nosotros desktop*/ }
+    /*nosotros no tiene @media para tablet*/
+    /*productos*/ }
     main .titulo {
       text-align: left;
       margin: 2rem; }
@@ -297,21 +328,6 @@ footer {
       top: -420px;
       left: 100px;
       text-align: left; }
-    main .nosotros-txt-img {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-      main .nosotros-txt-img .nosotros-txt p {
-        width: 70%;
-        margin-left: 15%; }
-        main .nosotros-txt-img .nosotros-txt p span {
-          font-variant: small-caps;
-          font-weight: bold;
-          color: #FA781A; }
-      main .nosotros-txt-img #carouselExampleSlidesOnly {
-        margin-left: 15%; }
-        main .nosotros-txt-img #carouselExampleSlidesOnly .carousel-inner .carousel-item img {
-          width: 80%; }
     main .inicio-padre {
       display: none; }
     main .inicio-padre-grid {
@@ -355,12 +371,17 @@ footer {
     /*logo y minimenu*/
     /*estilos nav de BT*/ }
     header .header-logo-minimenu {
+      height: 7rem;
       /*logo*/
       /*minimenu*/ }
-      header .header-logo-minimenu .header-logo img {
-        margin-left: 6rem; }
+      header .header-logo-minimenu .header-logo {
+        margin-top: 1rem; }
+        header .header-logo-minimenu .header-logo img {
+          height: 5rem;
+          margin-left: 6rem; }
       header .header-logo-minimenu .header-minimenu {
-        margin-right: 3rem; }
+        margin-right: 6rem;
+        margin-top: 3.5rem; }
     header .estilos-nav-bt {
       padding-bottom: 1.5rem;
       padding-top: 1.5rem;
@@ -371,10 +392,22 @@ footer {
   /* ↓↓↓ inicio main desktop ↓↓↓ */
   main {
     /*main*/
+    /*nosotros*/
     /*productos*/ }
     main .titulo {
       text-align: left;
       margin: 2rem 5rem; }
+    main .nosotros-txt-img {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: auto auto;
+      align-items: start; }
+      main .nosotros-txt-img .nosotros-txt p {
+        margin-left: 5rem;
+        text-align: justify; }
+        main .nosotros-txt-img .nosotros-txt p span {
+          font-weight: bold;
+          color: #FA781A; }
     main .productos-accesos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);

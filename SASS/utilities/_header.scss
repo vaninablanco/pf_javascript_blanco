@@ -17,8 +17,15 @@ header{
             img{                 
                 height: 3.5rem;
                 margin-left: 1rem;
+                animation: animacion-logo;
+                animation-duration: 0.5s;
+                position: relative;
+                @keyframes animacion-logo {
+                    0% {bottom: 6rem}
+                    100% {bottom::0}
+                }
                 &:hover{
-                    transform: scale(1.05);
+                    transform: scale(1.025);
                     opacity: 50%;
                 }
             } 
@@ -30,8 +37,15 @@ header{
             margin-top: 1.5rem;       
             width: 38%;     
             align-items: flex-end;
-            margin-right: 1rem;
-            .header-minimenu-enlace{                                                                
+            margin-right: 1rem;            
+            .header-minimenu-enlace{      
+                animation: animacion-iconos;
+                animation-duration: 0.5s;
+                position: relative; 
+                @keyframes animacion-iconos {
+                    0% {bottom: 6rem; opacity: 5%}
+                    100% {bottom: 0; opacity: 100%}
+                }                                                       
                 img{   
                     height: 0.7rem; 
                     margin-right: 0.1rem;

@@ -11,6 +11,13 @@ main{
         .productos-card{ 
             @include bordes-inferiores(0.15rem, solid, $color-principal);
             padding-bottom: 1rem;  
+            animation: animacion-productos;
+            animation-duration: 2s;
+            position: relative; 
+            @keyframes animacion-productos {
+                0% {top: 6rem; opacity: 5%}
+                100% {top: 0; opacity: 100%}
+            }
             &:hover{
                 transform: scale(1.05);
                 box-shadow: $color-filetes 0px 2px 16px 0px;

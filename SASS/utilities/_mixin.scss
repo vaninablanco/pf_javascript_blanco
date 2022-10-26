@@ -1,5 +1,4 @@
 //mixin filetes naranja
-
 @mixin bordes-inferiores($ancho-borde, $tipo-borde, $color-borde){
     border-bottom-width: $ancho-borde;
     border-bottom-style: $tipo-borde;
