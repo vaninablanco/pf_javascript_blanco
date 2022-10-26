@@ -1,14 +1,49 @@
-/*media queries desktop*/
-@media screen and (min-width:576px){ 
-    /*estilos nav de BT desktop*/
-    .estilos-nav-bt{    
-        padding-bottom: 1.5rem;
-        padding-top: 1.5rem;
-        padding-left: 4.5rem;        
-        .nav-item{
-            padding-right: 0.9rem;
-        } 
-    }    
+/*media queries tablet*/
+@media (min-width:600px) and (max-width:991px){ 
+    /* ↓↓↓ header tablet ↓↓↓ */
+    header{              
+        /*logo y minimenu*/
+        .header-logo-minimenu{     
+            /*logo*/                                          
+            .header-logo{           
+                img{            
+                    margin-left:2rem;
+                } 
+            } 
+            /*minimenu*/              
+            .header-minimenu{              
+                margin-right:2rem;
+                .header-minimenu-enlace{                                                                
+                    img{   
+                    }  
+                    a{ 
+                    }   
+                }
+            }
+        }              
+        /*estilos nav de BT*/
+        .estilos-nav-bt{
+            .container-fluid{
+                margin-left:1rem;
+                .navbar-toggler{
+                    .navbar-toggler-icon{
+                    }
+                }
+                #navbarSupportedContent{
+                    .navbar-nav{                    
+                        .nav-item{                      
+                            .nav-link{                                 
+                                &:hover{                                
+                                }                           
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* ↑↑↑ fin header tablet ↑↑↑ */
+
     /*estilos del main desktop*/
     h1{
         margin-left: 1rem;        
@@ -148,4 +183,55 @@
     footer{
         text-align: left;      
     }
+}
+/*fin queries tablet*/
+
+/*media queries desktop*/
+@media (min-width:992px){ 
+    /* ↓↓↓ header desktop ↓↓↓ */
+    header{              
+        /*logo y minimenu*/
+        .header-logo-minimenu{     
+            /*logo*/                                          
+            .header-logo{           
+                img{            
+                    margin-left:6rem;
+                } 
+            } 
+            /*minimenu*/              
+            .header-minimenu{              
+                margin-right:3rem;
+                .header-minimenu-enlace{                                                                
+                    img{   
+                    }  
+                    a{ 
+                    }   
+                }
+            }
+        }          
+        /*estilos nav de BT*/
+        .estilos-nav-bt{
+            padding-bottom: 1.5rem;
+            padding-top: 1.5rem;
+            padding-left: 4.5rem;
+            .container-fluid{
+                .navbar-toggler{
+                    .navbar-toggler-icon{
+                    }
+                }
+                #navbarSupportedContent{
+                    .navbar-nav{                    
+                        .nav-item{ 
+                            padding-right: 0.9rem;                     
+                            .nav-link{                                 
+                                &:hover{                                
+                                }                           
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    /* ↑↑↑ fin header desktop ↑↑↑ */
 }

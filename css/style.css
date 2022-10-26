@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header .estilos-nav-bt, main .inicio-accesos .inicio-card a .inicio-card-txt h3, .productos-padre {
   font-weight: bold;
   letter-spacing: 0.25rem;
@@ -28,37 +29,45 @@ header {
   /*estilos nav de BT*/ }
   header .header-logo-minimenu {
     display: flex;
+    justify-content: center;
     height: 5rem;
     /*logo*/
     /*minimenu*/ }
-    header .header-logo-minimenu .header-logo img {
-      height: 2rem;
-      margin-left: 1rem;
-      margin-bottom: 1rem;
-      margin-top: 2rem; }
-      header .header-logo-minimenu .header-logo img:hover {
-        transform: scale(1.05); }
+    header .header-logo-minimenu .header-logo {
+      margin-top: 0.75rem;
+      width: 62%; }
+      header .header-logo-minimenu .header-logo img {
+        height: 3.5rem;
+        margin-left: 1rem; }
+        header .header-logo-minimenu .header-logo img:hover {
+          transform: scale(1.05);
+          opacity: 50%; }
     header .header-logo-minimenu .header-minimenu {
-      margin-top: 1.5rem; }
-      header .header-logo-minimenu .header-minimenu nav ul li {
-        list-style-type: none; }
-        header .header-logo-minimenu .header-minimenu nav ul li img {
-          height: 0.7rem;
-          margin-right: 0.2rem; }
-        header .header-logo-minimenu .header-minimenu nav ul li a {
-          color: white;
-          text-decoration: none;
-          font-size: 70%;
-          text-transform: uppercase; }
-          header .header-logo-minimenu .header-minimenu nav ul li a:hover {
-            color: #FA781A; }
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.5rem;
+      width: 38%;
+      align-items: flex-end;
+      margin-right: 1rem; }
+      header .header-logo-minimenu .header-minimenu .header-minimenu-enlace img {
+        height: 0.7rem;
+        margin-right: 0.1rem;
+        justify-content: start; }
+      header .header-logo-minimenu .header-minimenu .header-minimenu-enlace a {
+        color: white;
+        text-decoration: none;
+        font-size: 70%;
+        text-transform: uppercase; }
+        header .header-logo-minimenu .header-minimenu .header-minimenu-enlace a:hover {
+          color: #FA781A;
+          justify-content: start; }
   header .estilos-nav-bt {
     background-color: #FA781A;
     font-size: 0.8rem; }
-  header .nav-link {
-    color: white; }
-    header .nav-link:hover {
-      color: black; }
+    header .estilos-nav-bt .container-fluid #navbarSupportedContent .navbar-nav .nav-item .nav-link {
+      color: white; }
+      header .estilos-nav-bt .container-fluid #navbarSupportedContent .navbar-nav .nav-item .nav-link:hover {
+        color: black; }
 
 /*estilos del main*/
 main {
@@ -245,15 +254,22 @@ footer {
       color: grey;
       text-decoration: none; }
 
-/*media queries desktop*/
-@media screen and (min-width: 576px) {
-  /*estilos nav de BT desktop*/
-  .estilos-nav-bt {
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    padding-left: 4.5rem; }
-    .estilos-nav-bt .nav-item {
-      padding-right: 0.9rem; }
+/*media queries tablet*/
+@media (min-width: 600px) and (max-width: 991px) {
+  /* ↓↓↓ header tablet ↓↓↓ */
+  header {
+    /*logo y minimenu*/
+    /*estilos nav de BT*/ }
+    header .header-logo-minimenu {
+      /*logo*/
+      /*minimenu*/ }
+      header .header-logo-minimenu .header-logo img {
+        margin-left: 2rem; }
+      header .header-logo-minimenu .header-minimenu {
+        margin-right: 2rem; }
+    header .estilos-nav-bt .container-fluid {
+      margin-left: 1rem; }
+  /* ↑↑↑ fin header tablet ↑↑↑ */
   /*estilos del main desktop*/
   h1 {
     margin-left: 1rem;
@@ -353,3 +369,25 @@ footer {
   /*estilos del footer desktop*/
   footer {
     text-align: left; } }
+
+/*fin queries tablet*/
+/*media queries desktop*/
+@media (min-width: 992px) {
+  /* ↓↓↓ header desktop ↓↓↓ */
+  header {
+    /*logo y minimenu*/
+    /*estilos nav de BT*/ }
+    header .header-logo-minimenu {
+      /*logo*/
+      /*minimenu*/ }
+      header .header-logo-minimenu .header-logo img {
+        margin-left: 6rem; }
+      header .header-logo-minimenu .header-minimenu {
+        margin-right: 3rem; }
+    header .estilos-nav-bt {
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      padding-left: 4.5rem; }
+      header .estilos-nav-bt .container-fluid #navbarSupportedContent .navbar-nav .nav-item {
+        padding-right: 0.9rem; }
+  /* ↑↑↑ fin header desktop ↑↑↑ */ }

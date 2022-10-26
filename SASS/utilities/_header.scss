@@ -7,55 +7,71 @@ header{
     z-index:2;              
     /*logo y minimenu*/
     .header-logo-minimenu{        
-        display:flex;         
-        height: 5rem;    
+        display:flex;
+        justify-content: center;        
+        height: 5rem;  
         /*logo*/                                          
-        .header-logo{             
-            img{   
-                height: 2rem; 
-                margin-left: 1rem;
-                margin-bottom: 1rem;
-                margin-top:2rem; 
+        .header-logo{ 
+            margin-top: 0.75rem; 
+            width: 62%;           
+            img{                 
+                height: 3.5rem;
+                margin-left:1rem;
                 &:hover{
                     transform: scale(1.05);
-                } 
+                    opacity: 50%;
+                }
             } 
         } 
         /*minimenu*/              
-        .header-minimenu{              
-            margin-top:1.5rem;                                                 
-            nav{
-                ul{  
-                    li {   
-                        list-style-type: none;                                                
-                        img{                             
-                            height: 0.7rem; 
-                            margin-right: 0.2rem;
-                        }  
-                        a{
-                            color: $color-fondo;
-                            text-decoration: none;  
-                            font-size: 70%; 
-                            text-transform: uppercase; 
-                            &:hover{
-                                color:$color-principal;
-                            }  
-                        }
-                    }
+        .header-minimenu{               
+            display: flex;   
+            flex-direction: column; 
+            margin-top: 1.5rem;       
+            width: 38%;     
+            align-items: flex-end;
+            margin-right:1rem;
+            .header-minimenu-enlace{                                                                
+                img{   
+                    height: 0.7rem; 
+                    margin-right: 0.1rem;
+                    justify-content: start;
+                }  
+                a{ 
+                    color: $color-fondo;
+                    text-decoration: none;  
+                    font-size: 70%; 
+                    text-transform: uppercase; 
+                    &:hover{
+                    color:$color-principal;
+                    justify-content: start;
+                    }  
                 }
-            }            
+            }
         }
     }              
     /*estilos nav de BT*/
     .estilos-nav-bt{
         @extend %tipografia;
         background-color: $color-principal;     
-        font-size: 0.8rem;               
-        }    
-    .nav-link{
-        color:$color-fondo;
-        &:hover{
-            color:$color-secundario;
+        font-size: 0.8rem; 
+        .container-fluid{
+            .navbar-toggler{
+                .navbar-toggler-icon{
+                }
+            }
+            #navbarSupportedContent{
+                .navbar-nav{                    
+                    .nav-item{                        
+                        .nav-link{ 
+                            color:$color-fondo;
+                            &:hover{
+                                color:$color-secundario;
+                            }                           
+                        }
+                    }
+                }
+            }
         }
     }
 }
