@@ -1,5 +1,5 @@
 @charset "UTF-8";
-header .estilos-nav-bt, main .inicio-accesos .inicio-card a .inicio-card-txt h3, .productos-padre {
+header .estilos-nav-bt, main .inicio-accesos .inicio-card a .inicio-card-txt h3, main .productos-accesos {
   font-weight: bold;
   letter-spacing: 0.25rem;
   text-transform: uppercase; }
@@ -72,20 +72,16 @@ header {
 /*estilos del main*/
 main {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  main h1 {
-    border-bottom-width: 0.2rem;
-    border-bottom-style: solid;
-    border-bottom-color: #FA781A;
-    margin-top: 2rem;
-    padding-bottom: 0.5rem; }
-  main p {
-    margin-left: 8.5rem;
-    margin-bottom: 1rem;
-    margin-right: 9rem;
-    margin-top: 1rem; }
+  margin-bottom: 4rem; }
+  main .titulo {
+    text-align: center;
+    margin: 2rem 1rem;
+    color: black; }
+    main .titulo h1 {
+      border-bottom-width: 0.2rem;
+      border-bottom-style: solid;
+      border-bottom-color: #FA781A;
+      padding-bottom: 0.5rem; }
 
 /*estilos de inicio*/
 main {
@@ -152,26 +148,27 @@ main {
       width: 80%; }
 
 /*estilos de productos*/
-.productos-padre {
+main .productos-accesos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
   text-align: center;
-  font-size: 1.5rem; }
-  .productos-padre .productos-hijos-img {
-    padding-top: 1rem; }
-    .productos-padre .productos-hijos-img img {
-      height: 10rem; }
-      .productos-padre .productos-hijos-img img:hover {
-        transform: scale(1.1); }
-  .productos-padre .productos-hijos-txt {
-    border-bottom-width: 0.1rem;
+  font-size: 1.25rem; }
+  main .productos-accesos .productos-card {
+    border-bottom-width: 0.15rem;
     border-bottom-style: solid;
     border-bottom-color: #FA781A;
-    padding-top: 1rem;
     padding-bottom: 1rem; }
-    .productos-padre .productos-hijos-txt:hover {
-      color: #FA781A; }
-
-.productos-padre-grid {
-  display: none; }
+    main .productos-accesos .productos-card:hover {
+      transform: scale(1.05);
+      box-shadow: silver 0px 2px 16px 0px;
+      border: 0; }
+    main .productos-accesos .productos-card a {
+      color: black;
+      text-decoration: none; }
+      main .productos-accesos .productos-card a img {
+        height: 11rem; }
 
 /*estilos de servicios*/
 .servicios-padre {
@@ -254,9 +251,9 @@ footer {
       color: grey;
       text-decoration: none; }
 
-/*media queries tablet*/
+/*MEDIA QUERIES TABLET*/
 @media (min-width: 600px) and (max-width: 991px) {
-  /* ↓↓↓ header tablet ↓↓↓ */
+  /* ↓↓↓ inicio header tablet ↓↓↓ */
   header {
     /*logo y minimenu*/
     /*estilos nav de BT*/ }
@@ -270,15 +267,21 @@ footer {
     header .estilos-nav-bt .container-fluid {
       margin-left: 1rem; }
   /* ↑↑↑ fin header tablet ↑↑↑ */
-  /*estilos del main desktop*/
-  h1 {
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-    width: 68rem; }
-  /*estilos de inicio desktop*/
+  /* ↓↓↓ inicio main tablet ↓↓↓ */
   main {
+    /*main*/
+    /*productos*/
     /*estilos de nosotros desktop*/
     /*fin estilos nosotros desktop*/ }
+    main .titulo {
+      text-align: left;
+      margin: 2rem; }
+    main .productos-accesos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      column-gap: 2rem;
+      margin: 2rem; }
     main .inicio-portada a img {
       width: auto;
       margin-bottom: 0px; }
@@ -333,32 +336,6 @@ footer {
         border-bottom: #FA781A solid 0.1rem; }
         main .inicio-padre-grid .inicio-hijos-txt-grid:hover {
           color: #FA781A; }
-  /*estilos de productos desktop*/
-  .productos-padre {
-    display: none; }
-  .productos-padre-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2fr, 1fr, 2fr, 1fr;
-    column-gap: 4rem;
-    row-gap: 1rem;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bolder;
-    letter-spacing: 0.25rem;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 2rem; }
-    .productos-padre-grid .productos-hijos-img-grid img {
-      width: 12rem; }
-      .productos-padre-grid .productos-hijos-img-grid img:hover {
-        transform: scale(1.1); }
-    .productos-padre-grid .productos-hijos-txt-grid {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: #FA781A solid 0.1rem; }
-      .productos-padre-grid .productos-hijos-txt-grid:hover {
-        color: #FA781A; }
   /*estilos de contacto desktop*/
   .contacto-contenedor {
     width: 50rem; }
@@ -371,9 +348,9 @@ footer {
     text-align: left; } }
 
 /*fin queries tablet*/
-/*media queries desktop*/
+/*MEDIA QUERIES DESKTOP*/
 @media (min-width: 992px) {
-  /* ↓↓↓ header desktop ↓↓↓ */
+  /* ↓↓↓ inicio header desktop ↓↓↓ */
   header {
     /*logo y minimenu*/
     /*estilos nav de BT*/ }
@@ -390,4 +367,17 @@ footer {
       padding-left: 4.5rem; }
       header .estilos-nav-bt .container-fluid #navbarSupportedContent .navbar-nav .nav-item {
         padding-right: 0.9rem; }
-  /* ↑↑↑ fin header desktop ↑↑↑ */ }
+  /* ↑↑↑ fin header desktop ↑↑↑ */
+  /* ↓↓↓ inicio main desktop ↓↓↓ */
+  main {
+    /*main*/
+    /*productos*/ }
+    main .titulo {
+      text-align: left;
+      margin: 2rem 5rem; }
+    main .productos-accesos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      column-gap: 2rem;
+      margin: 2rem 5rem; } }

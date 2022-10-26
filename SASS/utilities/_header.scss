@@ -3,8 +3,8 @@ header{
     @include bordes-inferiores(0.2rem, solid, $color-secundario); 
     background-color: $color-secundario;                    
     position: sticky;
-    top:0;
-    z-index:2;              
+    top: 0;
+    z-index: 2;              
     /*logo y minimenu*/
     .header-logo-minimenu{        
         display:flex;
@@ -16,7 +16,7 @@ header{
             width: 62%;           
             img{                 
                 height: 3.5rem;
-                margin-left:1rem;
+                margin-left: 1rem;
                 &:hover{
                     transform: scale(1.05);
                     opacity: 50%;
@@ -30,7 +30,7 @@ header{
             margin-top: 1.5rem;       
             width: 38%;     
             align-items: flex-end;
-            margin-right:1rem;
+            margin-right: 1rem;
             .header-minimenu-enlace{                                                                
                 img{   
                     height: 0.7rem; 

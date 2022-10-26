@@ -1,27 +1,30 @@
 /*estilos de productos*/
-
-.productos-padre{   
-    @extend %tipografia;   
-    text-align: center; 
-    font-size: 1.5rem;    
-    
-    .productos-hijos-img{   
-        padding-top: 1rem; 
-        img{ 
-            height: 10rem; 
-            &:hover{transform: scale(1.1);
+main{
+    .productos-accesos{
+        display: flex;  
+        flex-direction: column;    
+        row-gap: 2rem;  
+        align-items: center;  
+        text-align: center;    
+        @extend %tipografia;
+        font-size: 1.25rem;     
+        .productos-card{ 
+            @include bordes-inferiores(0.15rem, solid, $color-principal);
+            padding-bottom: 1rem;  
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: $color-filetes 0px 2px 16px 0px;
+                border: 0;              
+            }  
+            a{
+                color: $color-secundario;
+                text-decoration: none;
+                img{
+                    height: 11rem;
+                }
+                .productos-card-txt{                    
                 }
             }
-        } 
-    .productos-hijos-txt{    
-        @include bordes-inferiores(0.1rem, solid, $color-principal); 
-        padding-top: 1rem;
-        padding-bottom: 1rem;          
-        &:hover{    
-            color:$color-principal;
-            }
-        }    
-    }    
-.productos-padre-grid{
-    display: none;
-}
+        }
+    }
+}  

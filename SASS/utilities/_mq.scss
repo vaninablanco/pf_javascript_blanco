@@ -1,18 +1,18 @@
-/*media queries tablet*/
+/*MEDIA QUERIES TABLET*/
 @media (min-width:600px) and (max-width:991px){ 
-    /* ↓↓↓ header tablet ↓↓↓ */
+    /* ↓↓↓ inicio header tablet ↓↓↓ */
     header{              
         /*logo y minimenu*/
         .header-logo-minimenu{     
             /*logo*/                                          
             .header-logo{           
                 img{            
-                    margin-left:2rem;
+                    margin-left: 2rem;
                 } 
             } 
             /*minimenu*/              
             .header-minimenu{              
-                margin-right:2rem;
+                margin-right: 2rem;
                 .header-minimenu-enlace{                                                                
                     img{   
                     }  
@@ -24,7 +24,7 @@
         /*estilos nav de BT*/
         .estilos-nav-bt{
             .container-fluid{
-                margin-left:1rem;
+                margin-left: 1rem;
                 .navbar-toggler{
                     .navbar-toggler-icon{
                     }
@@ -43,15 +43,36 @@
         }
     }
     /* ↑↑↑ fin header tablet ↑↑↑ */
-
-    /*estilos del main desktop*/
-    h1{
-        margin-left: 1rem;        
-        margin-bottom: 2rem;        
-        width: 68rem;        
+    /* ↓↓↓ inicio main tablet ↓↓↓ */  
+    main{      
+        /*main*/
+        .titulo{  
+            text-align: left; 
+            margin: 2rem;    
+            h1{       
+            }    
         }
-    /*estilos de inicio desktop*/
-    main{
+        /*productos*/
+        .productos-accesos{
+            display: grid;  
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);    
+            column-gap: 2rem; 
+            margin: 2rem;      
+            .productos-card{  
+                &:hover{             
+                }  
+                a{
+                    img{
+                    }
+                    .productos-card-txt{                    
+                    }
+                }
+            }
+        }
+
+
+        
         .inicio-portada{        
             a{
                 img{                
@@ -94,7 +115,7 @@
                 .carousel-inner {            
                     .carousel-item {
                         img{
-                            width:80%;
+                            width: 80%;
                         }
                     }
                 }        
@@ -134,44 +155,11 @@
             } 
         }
     }   
-    }   
-    /*estilos de productos desktop*/
-    .productos-padre{
-        display:none;
-    }
-    .productos-padre-grid{
-    display: grid;    
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2fr, 1fr, 2fr, 1fr;
-    column-gap: 4rem;
-    row-gap: 1rem;
-    align-items: center;
-    font-size: 1.5rem; 
-    font-weight: bolder;
-    letter-spacing: 0.25rem;     
-    text-transform: uppercase; 
-    text-align: center;
-    margin-top: 2rem;
-        .productos-hijos-img-grid{
-            img{ 
-                width: 12rem; 
-                &:hover{ 
-                    transform: scale(1.1);
-                }
-            }
-        }
-        .productos-hijos-txt-grid{    
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: $color-principal solid 0.1rem;           
-            &:hover{    
-                color: $color-principal;
-            } 
-        }
     }    
+      
     /*estilos de contacto desktop*/
     .contacto-contenedor{
-        width:50rem;
+        width: 50rem;
         .contacto-mapa{
             display:none;
         }
@@ -186,21 +174,21 @@
 }
 /*fin queries tablet*/
 
-/*media queries desktop*/
+/*MEDIA QUERIES DESKTOP*/
 @media (min-width:992px){ 
-    /* ↓↓↓ header desktop ↓↓↓ */
+    /* ↓↓↓ inicio header desktop ↓↓↓ */
     header{              
         /*logo y minimenu*/
         .header-logo-minimenu{     
             /*logo*/                                          
             .header-logo{           
                 img{            
-                    margin-left:6rem;
+                    margin-left: 6rem;
                 } 
             } 
             /*minimenu*/              
             .header-minimenu{              
-                margin-right:3rem;
+                margin-right: 3rem;
                 .header-minimenu-enlace{                                                                
                     img{   
                     }  
@@ -234,4 +222,32 @@
         } 
     }
     /* ↑↑↑ fin header desktop ↑↑↑ */
+    /* ↓↓↓ inicio main desktop ↓↓↓ */
+    main{  
+        /*main*/    
+        .titulo{  
+            text-align: left; 
+            margin: 2rem 5rem;    
+            h1{       
+            }    
+        }
+        /*productos*/
+        .productos-accesos{
+            display: grid;  
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);    
+            column-gap: 2rem; 
+            margin: 2rem 5rem;      
+            .productos-card{  
+                &:hover{             
+                }  
+                a{
+                    img{
+                    }
+                    .productos-card-txt{                    
+                    }
+                }
+            }
+        }
+    }
 }
