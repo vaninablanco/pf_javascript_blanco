@@ -2,8 +2,10 @@
 header{
     @include bordes-inferiores(0.2rem, solid, $color-secundario); 
     background-color: $color-secundario;                    
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
+    width: 100%;
     z-index: 2;              
     /*logo y minimenu*/
     .header-logo-minimenu{        

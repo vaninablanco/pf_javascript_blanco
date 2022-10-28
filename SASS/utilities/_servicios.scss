@@ -1,39 +1,41 @@
 /*estilos de servicios*/
-.servicios-padre{
-    margin-top: 2rem;
-    ul{
-        li{
-        font-weight: bolder;
-        text-transform: uppercase;
+main{
+    .servicios-accesos{
+        display: flex;  
+        flex-direction: column;    
+        row-gap: 2rem;     
+        align-items: center;     
+        text-align: center;       
+
+        .servicios-card{ 
+            background-color: $color-secundario;
+            padding: 0.5rem;
+            border-radius: 0.25rem 0.25rem 0 0;
+            @include bordes-inferiores(0.2rem, solid, $color-principal);  
+            animation: animacion-productos;
+            animation-duration: 2s;
+            position: relative;
+            color: $color-fondo;         
+            @keyframes animacion-productos {
+                0% {top: 6rem; opacity: 5%}
+                100% {top: 0; opacity: 100%}
+            }
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: $color-filetes 0px 2px 16px 0px;
+                border: 0; 
+                @include bordes-inferiores(0.2rem, solid, $color-principal);             
+            }                 
+            img{
+                height: 11rem;                
+            }
+            .servicios-card-txt{  
+                h2{    
+                    padding-top: 0.5rem;
+                    width: 14.74rem;                   
+                    font-size: 1.25rem;  
+                }                 
+            }
         }
-        br{
-            display: none;
-        }
     }
-}
-.servicios-hijos-barra{
-    margin-top: 1rem; 
-    margin-bottom: 2rem; 
-    a{   
-        background-color: $color-principal; 
-        padding: 1rem;   
-        text-transform: uppercase;
-        text-decoration: none; 
-        font-weight: bolder;
-        color: $color-secundario; 
-        &:hover{     
-            background-color:$color-secundario;   
-            color:$color-fondo; 
-        }             
-    }
-}    
-.servicios-hijos-img{    
-    border-top:$color-principal solid 0.1rem;    
-    padding: 1rem;
-    img{
-        height: 12rem; 
-        &:hover{
-            transform: scale(1.1);  
-        }  
-    }
-}
+}  

@@ -20,12 +20,25 @@
     }
     /* ↑↑↑ fin header tablet ↑↑↑ */
     /* ↓↓↓ inicio main tablet ↓↓↓ */  
-    main{     
-        .titulo{  
+    main{  
+        .titulo{              
             text-align: left; 
             margin: 2rem;    
         }
-        .inicio-portada{      
+        .boton-whatsapp-mobile{
+            display: none;
+        }
+        .boton-whatsapp{
+            display: flex;
+            position: fixed;
+            right: 1rem;
+            bottom: 3rem;
+            img{
+                height: 4rem;
+                filter: drop-shadow(0.25rem 0.25rem grey);
+            }        
+        }
+        .inicio-portada{    
             .inicio-portada-txt{  
                 a{
                     h1{   
@@ -54,7 +67,15 @@
             grid-template-rows: repeat(4, 1fr);    
             column-gap: 2rem; 
             margin: 2rem;     
-        }              
+        } 
+        .servicios-accesos{
+            display: grid;  
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);    
+            column-gap: 2rem; 
+            margin: 2rem;    
+            justify-items: center; 
+        }             
     }
 }
 /*MEDIA QUERIES DESKTOP*/
@@ -92,17 +113,32 @@
     }
     /* ↑↑↑ fin header desktop ↑↑↑ */
     /* ↓↓↓ inicio main desktop ↓↓↓ */
-    main{     
+    main{   
+        margin-top: 12rem;   
         .titulo{  
+            padding-top: 3rem;
             text-align: left; 
             margin: 2rem 5rem;   
         }  
-        .inicio-portada{    
-            .inicio-portada-img{ 
+        .boton-whatsapp-mobile{
+            display: none;
+        }
+        .boton-whatsapp{
+            display: flex;
+            position: fixed;
+            right: 1rem;
+            bottom: 3rem;
+            img{
+                height: 4rem;
+                filter: drop-shadow(0.25rem 0.25rem grey);
+            }        
+        }
+        .inicio-portada{   
+            .inicio-portada-img{                 
                 text-align: center;               
                 background-color: $color-secundario;
                 @include bordes-inferiores(0.2rem, solid, $color-principal)
-                a{                      
+                a{     
                     img{  
                         width: 80%;  
                         border: 0;                                  
@@ -161,6 +197,15 @@
             column-gap: 4rem; 
             margin: 2rem 5rem;     
         }
+        .servicios-accesos{
+            display: grid;  
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);    
+            column-gap: 4rem; 
+            margin: 2rem 5rem;
+            justify-items: center;     
+        }
     }
-    /* ↑↑↑ fin main desktop ↑↑↑ */   
 }
+    /* ↑↑↑ fin main desktop ↑↑↑ */   
+

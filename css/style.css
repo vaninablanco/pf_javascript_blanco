@@ -22,8 +22,10 @@ header {
   border-bottom-style: solid;
   border-bottom-color: black;
   background-color: black;
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  width: 100%;
   z-index: 2;
   /*logo y minimenu*/
   /*estilos nav de BT*/ }
@@ -96,6 +98,7 @@ main {
   background-color: white;
   margin-bottom: 4rem; }
   main .titulo {
+    padding-top: 9rem;
     text-align: center;
     margin: 2rem 1rem;
     color: black; }
@@ -104,48 +107,60 @@ main {
       border-bottom-style: solid;
       border-bottom-color: #FA781A;
       padding-bottom: 0.5rem; }
+  main .boton-whatsapp-mobile {
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem; }
+    main .boton-whatsapp-mobile img {
+      height: 3rem;
+      filter: drop-shadow(0.15rem 0.25rem grey); }
+  main .boton-whatsapp {
+    display: none; }
 
 /*estilos de inicio*/
 main {
   /*inicio accesos*/ }
-  main .inicio-portada .inicio-portada-img a img {
-    width: 100%;
-    border-bottom-width: 0.2rem;
-    border-bottom-style: solid;
-    border-bottom-color: #FA781A; }
-  main .inicio-portada .inicio-portada-txt {
-    position: absolute;
-    top: 10rem; }
-    main .inicio-portada .inicio-portada-txt a {
-      text-decoration: none; }
-      main .inicio-portada .inicio-portada-txt a h1 {
-        letter-spacing: 0.1rem;
-        text-transform: uppercase;
-        font-size: 2.5rem;
-        font-family: 'Anton', sans-serif;
-        color: white;
-        text-align: left;
-        margin-left: 1rem;
-        opacity: 70%;
-        animation: animacion-txt-inicio;
-        animation-duration: 2s;
-        opacity: 70%; }
+  main .inicio-portada {
+    margin-top: 8.7rem; }
+    main .inicio-portada .inicio-portada-img a img {
+      width: 100%;
+      border-bottom-width: 0.2rem;
+      border-bottom-style: solid;
+      border-bottom-color: #FA781A; }
+    main .inicio-portada .inicio-portada-txt {
+      position: absolute;
+      top: 10rem; }
+      main .inicio-portada .inicio-portada-txt a {
+        text-decoration: none; }
+        main .inicio-portada .inicio-portada-txt a h1 {
+          letter-spacing: 0.1rem;
+          text-transform: uppercase;
+          font-size: 2.5rem;
+          font-family: 'Anton', sans-serif;
+          color: white;
+          text-align: left;
+          margin-left: 1rem;
+          margin-right: 0.5rem;
+          opacity: 70%;
+          animation: animacion-txt-inicio;
+          animation-duration: 2s;
+          opacity: 70%; }
 
 @keyframes animacion-txt-inicio {
   0% {
     opacity: 0%; }
   100% {
     opacity: 70%; } }
-  main .inicio-portada .inicio-portada-animacion {
-    position: absolute;
-    top: 9.5rem;
-    width: 2.5rem;
-    height: 0.05rem;
-    background-color: #FA781A;
-    margin-left: 1rem;
-    animation: animacion-barra-inicio;
-    animation-duration: 3s;
-    animation-iteration-count: infinite; }
+    main .inicio-portada .inicio-portada-animacion {
+      position: absolute;
+      top: 9.5rem;
+      width: 2.5rem;
+      height: 0.05rem;
+      background-color: #FA781A;
+      margin-left: 1rem;
+      animation: animacion-barra-inicio;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; }
 
 @keyframes animacion-barra-inicio {
   0% {
@@ -164,12 +179,15 @@ main {
     main .inicio-accesos .inicio-card {
       background-color: white;
       animation: animacion-inicio;
-      animation-duration: 2s; }
+      animation-duration: 2s;
+      position: relative; }
 
 @keyframes animacion-inicio {
   0% {
+    top: 6rem;
     opacity: 5%; }
   100% {
+    top: 0;
     opacity: 100%; } }
       main .inicio-accesos .inicio-card a {
         text-decoration: none; }
@@ -244,35 +262,44 @@ main .productos-accesos {
         font-size: 1.25rem; }
 
 /*estilos de servicios*/
-.servicios-padre {
-  margin-top: 2rem; }
-  .servicios-padre ul li {
-    font-weight: bolder;
-    text-transform: uppercase; }
-  .servicios-padre ul br {
-    display: none; }
+main .servicios-accesos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  text-align: center; }
+  main .servicios-accesos .servicios-card {
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #FA781A;
+    animation: animacion-productos;
+    animation-duration: 2s;
+    position: relative;
+    color: white; }
 
-.servicios-hijos-barra {
-  margin-top: 1rem;
-  margin-bottom: 2rem; }
-  .servicios-hijos-barra a {
-    background-color: #FA781A;
-    padding: 1rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bolder;
-    color: black; }
-    .servicios-hijos-barra a:hover {
-      background-color: black;
-      color: white; }
-
-.servicios-hijos-img {
-  border-top: #FA781A solid 0.1rem;
-  padding: 1rem; }
-  .servicios-hijos-img img {
-    height: 12rem; }
-    .servicios-hijos-img img:hover {
-      transform: scale(1.1); }
+@keyframes animacion-productos {
+  0% {
+    top: 6rem;
+    opacity: 5%; }
+  100% {
+    top: 0;
+    opacity: 100%; } }
+    main .servicios-accesos .servicios-card:hover {
+      transform: scale(1.05);
+      box-shadow: silver 0px 2px 16px 0px;
+      border: 0;
+      border-bottom-width: 0.2rem;
+      border-bottom-style: solid;
+      border-bottom-color: #FA781A; }
+    main .servicios-accesos .servicios-card img {
+      height: 11rem; }
+    main .servicios-accesos .servicios-card .servicios-card-txt h2 {
+      padding-top: 0.5rem;
+      width: 14.74rem;
+      font-size: 1.25rem; }
 
 /*estilos de contacto*/
 .contacto-contenedor {
@@ -309,7 +336,7 @@ main .productos-accesos {
 /*footer*/
 footer {
   background-color: black;
-  border-top: 0.15rem solid #FA781A;
+  border-top: 0.2rem solid #FA781A;
   margin-top: 2rem;
   padding: 2rem;
   text-align: center;
@@ -337,6 +364,16 @@ footer {
   main .titulo {
     text-align: left;
     margin: 2rem; }
+  main .boton-whatsapp-mobile {
+    display: none; }
+  main .boton-whatsapp {
+    display: flex;
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem; }
+    main .boton-whatsapp img {
+      height: 4rem;
+      filter: drop-shadow(0.25rem 0.25rem grey); }
   main .inicio-portada .inicio-portada-txt a h1 {
     font-size: 4rem;
     margin-left: 2rem; }
@@ -351,7 +388,14 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     column-gap: 2rem;
-    margin: 2rem; } }
+    margin: 2rem; }
+  main .servicios-accesos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
+    margin: 2rem;
+    justify-items: center; } }
 
 /*MEDIA QUERIES DESKTOP*/
 @media (min-width: 992px) {
@@ -374,50 +418,71 @@ footer {
       padding-right: 0.9rem; }
   /* ↑↑↑ fin header desktop ↑↑↑ */
   /* ↓↓↓ inicio main desktop ↓↓↓ */
-  main .titulo {
-    text-align: left;
-    margin: 2rem 5rem; }
-  main .inicio-portada .inicio-portada-img {
-    text-align: center;
-    background-color: black;
-    border-bottom-width: 0.2rem;
-    border-bottom-style: solid;
-    border-bottom-color: #FA781A; }
-    main .inicio-portada .inicio-portada-img a img {
-      width: 80%;
-      border: 0; }
-  main .inicio-portada .inicio-portada-txt {
-    top: 14.5rem; }
-    main .inicio-portada .inicio-portada-txt a h1 {
-      width: 55%;
-      font-size: 6rem;
+  main {
+    margin-top: 12rem; }
+    main .titulo {
+      padding-top: 3rem;
+      text-align: left;
+      margin: 2rem 5rem; }
+    main .boton-whatsapp-mobile {
+      display: none; }
+    main .boton-whatsapp {
+      display: flex;
+      position: fixed;
+      right: 1rem;
+      bottom: 3rem; }
+      main .boton-whatsapp img {
+        height: 4rem;
+        filter: drop-shadow(0.25rem 0.25rem grey); }
+    main .inicio-portada .inicio-portada-img {
+      text-align: center;
+      background-color: black;
+      border-bottom-width: 0.2rem;
+      border-bottom-style: solid;
+      border-bottom-color: #FA781A; }
+      main .inicio-portada .inicio-portada-img a img {
+        width: 80%;
+        border: 0; }
+    main .inicio-portada .inicio-portada-txt {
+      top: 14.5rem; }
+      main .inicio-portada .inicio-portada-txt a h1 {
+        width: 55%;
+        font-size: 6rem;
+        margin-left: 6rem; }
+    main .inicio-portada .inicio-portada-animacion {
+      top: 14rem;
       margin-left: 6rem; }
-  main .inicio-portada .inicio-portada-animacion {
-    top: 14rem;
-    margin-left: 6rem; }
-  main .inicio-accesos {
-    top: -3rem;
-    flex-direction: row;
-    column-gap: 2.5rem;
-    justify-content: center;
-    /* inicio cards*/ }
-    main .inicio-accesos .inicio-card a img {
-      height: 17rem; }
-  main .nosotros-txt-img {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto;
-    align-items: start; }
-    main .nosotros-txt-img .nosotros-txt p {
-      margin-left: 5rem;
-      text-align: justify; }
-      main .nosotros-txt-img .nosotros-txt p span {
-        font-weight: bold;
-        color: #FA781A; }
-  main .productos-accesos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    column-gap: 4rem;
-    margin: 2rem 5rem; }
-  /* ↑↑↑ fin main desktop ↑↑↑ */ }
+    main .inicio-accesos {
+      top: -3rem;
+      flex-direction: row;
+      column-gap: 2.5rem;
+      justify-content: center;
+      /* inicio cards*/ }
+      main .inicio-accesos .inicio-card a img {
+        height: 17rem; }
+    main .nosotros-txt-img {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      grid-template-rows: auto auto;
+      align-items: start; }
+      main .nosotros-txt-img .nosotros-txt p {
+        margin-left: 5rem;
+        text-align: justify; }
+        main .nosotros-txt-img .nosotros-txt p span {
+          font-weight: bold;
+          color: #FA781A; }
+    main .productos-accesos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      column-gap: 4rem;
+      margin: 2rem 5rem; }
+    main .servicios-accesos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 4rem;
+      margin: 2rem 5rem;
+      justify-items: center; } }
+
+/* ↑↑↑ fin main desktop ↑↑↑ */

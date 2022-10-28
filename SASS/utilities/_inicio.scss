@@ -1,6 +1,7 @@
 /*estilos de inicio*/
 main{
-    .inicio-portada{  
+    .inicio-portada{ 
+        margin-top: 8.7rem;        
         .inicio-portada-img{
             a{  
                 img{     
@@ -22,6 +23,7 @@ main{
                     color: $color-fondo;
                     text-align: left;
                     margin-left: 1rem;
+                    margin-right: 0.5rem;
                     opacity: 70%;                
                     animation: animacion-txt-inicio;
                     animation-duration: 2s; 
@@ -62,10 +64,11 @@ main{
         .inicio-card{                  
             background-color: $color-fondo;  
             animation: animacion-inicio;
-            animation-duration: 2s;        
+            animation-duration: 2s;      
+            position: relative;
             @keyframes animacion-inicio{
-                0% {opacity: 5%}
-                100% {opacity: 100%}
+                0% {top: 6rem; opacity: 5%}
+                100% {top: 0; opacity: 100%}
             }            
             a{                      
                 text-decoration: none;
