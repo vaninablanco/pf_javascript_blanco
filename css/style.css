@@ -1,5 +1,5 @@
 @charset "UTF-8";
-header .estilos-nav-bt, main .inicio-accesos .inicio-card a .inicio-card-txt h3, main .productos-accesos {
+header .estilos-nav-bt, main .productos-accesos {
   font-weight: bold;
   letter-spacing: 0.25rem;
   text-transform: uppercase; }
@@ -40,16 +40,17 @@ header {
         height: 3.5rem;
         margin-left: 1rem;
         animation: animacion-logo;
-        animation-duration: 0.5s;
+        animation-duration: 1s;
         position: relative; }
 
 @keyframes animacion-logo {
   0% {
-    bottom: 6rem; }
+    right: 10rem;
+    opacity: 0%; }
   100% {
-    bottom: 0; } }
+    right: 0;
+    opacity: 100%; } }
         header .header-logo-minimenu .header-logo img:hover {
-          transform: scale(1.025);
           opacity: 50%; }
     header .header-logo-minimenu .header-minimenu {
       display: flex;
@@ -60,15 +61,15 @@ header {
       margin-right: 1rem; }
       header .header-logo-minimenu .header-minimenu .header-minimenu-enlace {
         animation: animacion-iconos;
-        animation-duration: 0.5s;
+        animation-duration: 1s;
         position: relative; }
 
 @keyframes animacion-iconos {
   0% {
-    bottom: 6rem;
-    opacity: 5%; }
+    left: 10rem;
+    opacity: 0%; }
   100% {
-    bottom: 0;
+    left: 0;
     opacity: 100%; } }
         header .header-logo-minimenu .header-minimenu .header-minimenu-enlace img {
           height: 0.7rem;
@@ -107,49 +108,88 @@ main {
 /*estilos de inicio*/
 main {
   /*inicio accesos*/ }
-  main .inicio-portada {
-    display: flex;
-    flex-wrap: wrap; }
-    main .inicio-portada a {
-      background-color: black;
+  main .inicio-portada .inicio-portada-img a img {
+    width: 100%;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #FA781A; }
+  main .inicio-portada .inicio-portada-txt {
+    position: absolute;
+    top: 10rem; }
+    main .inicio-portada .inicio-portada-txt a {
       text-decoration: none; }
-      main .inicio-portada a img {
-        width: 100%; }
-      main .inicio-portada a .inicio-portada-txt {
-        background-color: black;
-        position: relative;
-        top: -1rem; }
-        main .inicio-portada a .inicio-portada-txt h1 {
-          text-transform: uppercase;
-          font-family: Arial, Helvetica, sans-serif;
-          color: white;
-          font-weight: bolder;
-          font-size: 2rem;
-          text-align: center; }
+      main .inicio-portada .inicio-portada-txt a h1 {
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-family: 'Anton', sans-serif;
+        color: white;
+        text-align: left;
+        margin-left: 1rem;
+        opacity: 70%;
+        animation: animacion-txt-inicio;
+        animation-duration: 2s;
+        opacity: 70%; }
+
+@keyframes animacion-txt-inicio {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 70%; } }
+  main .inicio-portada .inicio-portada-animacion {
+    position: absolute;
+    top: 9.5rem;
+    width: 2.5rem;
+    height: 0.05rem;
+    background-color: #FA781A;
+    margin-left: 1rem;
+    animation: animacion-barra-inicio;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
+
+@keyframes animacion-barra-inicio {
+  0% {
+    left: 0; }
+  100% {
+    left: 100%; } }
   main .inicio-accesos {
+    position: relative;
+    top: -2rem;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    margin-bottom: 5rem;
-    /*para que no se mueva footer*/
+    align-items: center;
+    text-align: center;
     /* inicio cards*/ }
     main .inicio-accesos .inicio-card {
-      border: 1px solid silver;
-      border-radius: 0.5rem; }
-      main .inicio-accesos .inicio-card:hover {
-        transform: scale(1.05);
-        box-shadow: silver 0px 2px 16px 0px;
-        border: 0; }
+      background-color: white;
+      animation: animacion-inicio;
+      animation-duration: 2s; }
+
+@keyframes animacion-inicio {
+  0% {
+    opacity: 5%; }
+  100% {
+    opacity: 100%; } }
       main .inicio-accesos .inicio-card a {
         text-decoration: none; }
         main .inicio-accesos .inicio-card a img {
-          height: 15rem;
-          padding: 0.5rem; }
-        main .inicio-accesos .inicio-card a .inicio-card-txt h3 {
-          font-size: 1.5rem;
-          text-align: center;
-          padding-bottom: 1rem;
-          color: #FA781A; }
+          height: 15rem; }
+          main .inicio-accesos .inicio-card a img:hover {
+            opacity: 70%; }
+        main .inicio-accesos .inicio-card a .inicio-card-txt h2 {
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: black;
+          font-family: 'Anton', sans-serif;
+          letter-spacing: 0.1rem;
+          border-bottom-width: 0.15rem;
+          border-bottom-style: solid;
+          border-bottom-color: #FA781A;
+          padding-top: 0.6rem;
+          padding-bottom: 0.25rem; }
+          main .inicio-accesos .inicio-card a .inicio-card-txt h2:hover {
+            opacity: 70%; }
 
 /*estilos de nosotros*/
 main .nosotros-txt-img {
@@ -174,8 +214,7 @@ main .productos-accesos {
   flex-direction: column;
   row-gap: 2rem;
   align-items: center;
-  text-align: center;
-  font-size: 1.25rem; }
+  text-align: center; }
   main .productos-accesos .productos-card {
     border-bottom-width: 0.15rem;
     border-bottom-style: solid;
@@ -201,6 +240,8 @@ main .productos-accesos {
       text-decoration: none; }
       main .productos-accesos .productos-card a img {
         height: 11rem; }
+      main .productos-accesos .productos-card a .productos-card-txt h2 {
+        font-size: 1.25rem; }
 
 /*estilos de servicios*/
 .servicios-padre {
@@ -272,145 +313,111 @@ footer {
   margin-top: 2rem;
   padding: 2rem;
   text-align: center;
-  /*texto del footer*/ }
-  footer h2 {
-    color: white;
-    font-size: 0.6rem;
-    letter-spacing: 0.1rem;
-    font-weight: bold;
-    /*link externo del footer*/ }
-    footer h2 a {
-      color: grey;
-      text-decoration: none; }
+  /*texto del footer*/
+  color: white;
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  /*link externo del footer*/ }
+  footer a {
+    color: grey;
+    text-decoration: none; }
 
 /*MEDIA QUERIES TABLET*/
 @media (min-width: 600px) and (max-width: 991px) {
   /* ↓↓↓ inicio header tablet ↓↓↓ */
-  header {
-    /*logo y minimenu*/
-    /*estilos nav de BT*/ }
-    header .header-logo-minimenu {
-      /*logo*/
-      /*minimenu*/ }
-      header .header-logo-minimenu .header-logo img {
-        margin-left: 2rem; }
-      header .header-logo-minimenu .header-minimenu {
-        margin-right: 2rem; }
-    header .estilos-nav-bt .container-fluid {
-      margin-left: 1rem; }
+  header .header-logo-minimenu .header-logo img {
+    margin-left: 2rem; }
+  header .header-logo-minimenu .header-minimenu {
+    margin-right: 2rem; }
+  header .estilos-nav-bt .container-fluid {
+    margin-left: 1rem; }
   /* ↑↑↑ fin header tablet ↑↑↑ */
   /* ↓↓↓ inicio main tablet ↓↓↓ */
-  main {
-    /*main*/
-    /*nosotros no tiene @media para tablet*/
-    /*productos*/ }
-    main .titulo {
-      text-align: left;
-      margin: 2rem; }
-    main .productos-accesos {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-      column-gap: 2rem;
-      margin: 2rem; }
-    main .inicio-portada a img {
-      width: auto;
-      margin-bottom: 0px; }
-    main .inicio-portada #inicio-imagen-txt {
-      text-transform: uppercase;
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      font-weight: bolder;
-      font-size: 80px;
-      margin-right: 50px;
-      position: relative;
-      opacity: 50%;
-      top: -420px;
-      left: 100px;
-      text-align: left; }
-    main .inicio-padre {
-      display: none; }
-    main .inicio-padre-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 2fr, 1fr;
-      column-gap: 4rem;
-      row-gap: 1rem;
-      align-items: center;
-      font-size: 1.5rem;
-      font-weight: bolder;
-      letter-spacing: 0.25rem;
-      text-transform: uppercase;
-      text-align: center; }
-      main .inicio-padre-grid .inicio-hijos-img-grid img {
-        width: 12rem; }
-        main .inicio-padre-grid .inicio-hijos-img-grid img:hover {
-          transform: scale(1.1); }
-      main .inicio-padre-grid .inicio-hijos-txt-grid {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: #FA781A solid 0.1rem; }
-        main .inicio-padre-grid .inicio-hijos-txt-grid:hover {
-          color: #FA781A; }
-  /*estilos de contacto desktop*/
-  .contacto-contenedor {
-    width: 50rem; }
-    .contacto-contenedor .contacto-mapa {
-      display: none; }
-    .contacto-contenedor .contacto-mapa-desktop {
-      display: flex; }
-  /*estilos del footer desktop*/
-  footer {
-    text-align: left; } }
+  main .titulo {
+    text-align: left;
+    margin: 2rem; }
+  main .inicio-portada .inicio-portada-txt a h1 {
+    font-size: 4rem;
+    margin-left: 2rem; }
+  main .inicio-portada .inicio-portada-animacion {
+    margin-left: 2rem; }
+  main .inicio-accesos {
+    top: -4rem; }
+    main .inicio-accesos .inicio-card a img {
+      height: 18rem; }
+  main .productos-accesos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 2rem;
+    margin: 2rem; } }
 
-/*fin queries tablet*/
 /*MEDIA QUERIES DESKTOP*/
 @media (min-width: 992px) {
   /* ↓↓↓ inicio header desktop ↓↓↓ */
-  header {
-    /*logo y minimenu*/
-    /*estilos nav de BT*/ }
-    header .header-logo-minimenu {
-      height: 7rem;
-      /*logo*/
-      /*minimenu*/ }
-      header .header-logo-minimenu .header-logo {
-        margin-top: 1rem; }
-        header .header-logo-minimenu .header-logo img {
-          height: 5rem;
-          margin-left: 6rem; }
-      header .header-logo-minimenu .header-minimenu {
-        margin-right: 6rem;
-        margin-top: 3.5rem; }
-    header .estilos-nav-bt {
-      padding-bottom: 1.5rem;
-      padding-top: 1.5rem;
-      padding-left: 4.5rem; }
-      header .estilos-nav-bt .container-fluid #navbarSupportedContent .navbar-nav .nav-item {
-        padding-right: 0.9rem; }
+  header .header-logo-minimenu {
+    height: 7rem; }
+    header .header-logo-minimenu .header-logo {
+      margin-top: 1rem; }
+      header .header-logo-minimenu .header-logo img {
+        height: 5rem;
+        margin-left: 6rem; }
+    header .header-logo-minimenu .header-minimenu {
+      margin-right: 6rem;
+      margin-top: 3.5rem; }
+  header .estilos-nav-bt {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 4.5rem; }
+    header .estilos-nav-bt .container-fluid #navbarSupportedContent .navbar-nav .nav-item {
+      padding-right: 0.9rem; }
   /* ↑↑↑ fin header desktop ↑↑↑ */
   /* ↓↓↓ inicio main desktop ↓↓↓ */
-  main {
-    /*main*/
-    /*nosotros*/
-    /*productos*/ }
-    main .titulo {
-      text-align: left;
-      margin: 2rem 5rem; }
-    main .nosotros-txt-img {
-      display: grid;
-      grid-template-columns: 60% 40%;
-      grid-template-rows: auto auto;
-      align-items: start; }
-      main .nosotros-txt-img .nosotros-txt p {
-        margin-left: 5rem;
-        text-align: justify; }
-        main .nosotros-txt-img .nosotros-txt p span {
-          font-weight: bold;
-          color: #FA781A; }
-    main .productos-accesos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      column-gap: 2rem;
-      margin: 2rem 5rem; } }
+  main .titulo {
+    text-align: left;
+    margin: 2rem 5rem; }
+  main .inicio-portada .inicio-portada-img {
+    text-align: center;
+    background-color: black;
+    border-bottom-width: 0.2rem;
+    border-bottom-style: solid;
+    border-bottom-color: #FA781A; }
+    main .inicio-portada .inicio-portada-img a img {
+      width: 80%;
+      border: 0; }
+  main .inicio-portada .inicio-portada-txt {
+    top: 14.5rem; }
+    main .inicio-portada .inicio-portada-txt a h1 {
+      width: 50%;
+      font-size: 6rem;
+      margin-left: 6rem; }
+  main .inicio-portada .inicio-portada-animacion {
+    top: 14rem;
+    margin-left: 6rem; }
+  main .inicio-accesos {
+    top: -3rem;
+    flex-direction: row;
+    column-gap: 2.5rem;
+    justify-content: center;
+    /* inicio cards*/ }
+    main .inicio-accesos .inicio-card a img {
+      height: 17rem; }
+  main .nosotros-txt-img {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    align-items: start; }
+    main .nosotros-txt-img .nosotros-txt p {
+      margin-left: 5rem;
+      text-align: justify; }
+      main .nosotros-txt-img .nosotros-txt p span {
+        font-weight: bold;
+        color: #FA781A; }
+  main .productos-accesos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 4rem;
+    margin: 2rem 5rem; }
+  /* ↑↑↑ fin main desktop ↑↑↑ */ }

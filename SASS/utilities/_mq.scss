@@ -1,195 +1,89 @@
 /*MEDIA QUERIES TABLET*/
 @media (min-width:600px) and (max-width:991px){ 
     /* ↓↓↓ inicio header tablet ↓↓↓ */
-    header{              
-        /*logo y minimenu*/
-        .header-logo-minimenu{     
-            /*logo*/                                          
+    header{          
+        .header-logo-minimenu{    
             .header-logo{           
                 img{            
                     margin-left: 2rem;
                 } 
-            } 
-            /*minimenu*/              
+            }               
             .header-minimenu{              
-                margin-right: 2rem;
-                .header-minimenu-enlace{                                                                
-                    img{   
-                    }  
-                    a{ 
-                    }   
-                }
+                margin-right: 2rem;                
             }
-        }              
-        /*estilos nav de BT*/
+        }            
         .estilos-nav-bt{
             .container-fluid{
-                margin-left: 1rem;
-                .navbar-toggler{
-                    .navbar-toggler-icon{
-                    }
-                }
-                #navbarSupportedContent{
-                    .navbar-nav{                    
-                        .nav-item{                      
-                            .nav-link{                                 
-                                &:hover{                                
-                                }                           
-                            }
-                        }
-                    }
-                }
+                margin-left: 1rem;                
             }
         }
     }
     /* ↑↑↑ fin header tablet ↑↑↑ */
     /* ↓↓↓ inicio main tablet ↓↓↓ */  
-    main{      
-        /*main*/
+    main{     
         .titulo{  
             text-align: left; 
             margin: 2rem;    
-            h1{       
-            }    
         }
-        /*nosotros no tiene @media para tablet*/
-        /*productos*/
+        .inicio-portada{      
+            .inicio-portada-txt{  
+                 a{
+                    h1{   
+                        font-size: 4rem; 
+                        margin-left: 2rem;                            
+                    }
+                }                  
+            }
+            .inicio-portada-animacion{                           
+                margin-left: 2rem;    
+            }
+        }
+        .inicio-accesos{                     
+            top: -4rem;    
+            .inicio-card{      
+                a{    
+                    img{            
+                        height: 18rem;                                      
+                    }
+                }
+            }
+        }
         .productos-accesos{
             display: grid;  
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, 1fr);    
             column-gap: 2rem; 
-            margin: 2rem;      
-            .productos-card{  
-                &:hover{             
-                }  
-                a{
-                    img{
-                    }
-                    .productos-card-txt{                    
-                    }
-                }
-            }
-        }
-
-
-        .inicio-portada{        
-            a{
-                img{                
-                    width: auto;
-                    margin-bottom:0px;
-                }
-            }
-            #inicio-imagen-txt{
-                text-transform: uppercase; 
-                font-family:Arial, Helvetica, sans-serif;
-                color: white;
-                font-weight:bolder;
-                font-size: 80px;  
-                margin-right: 50px;          
-                position: relative;
-                opacity: 50%;
-                top: -420px; 
-                left: 100px;     
-                text-align: left;     
-                }
-        }          
-        .inicio-padre{
-            display:none;
-        }
-        .inicio-padre-grid{                
-            display: grid;    
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 2fr, 1fr;
-            column-gap: 4rem;
-            row-gap: 1rem;
-            align-items: center;
-            font-size: 1.5rem; 
-            font-weight: bolder;
-            letter-spacing: 0.25rem;     
-            text-transform: uppercase; 
-            text-align: center;            
-            .inicio-hijos-img-grid{
-                img{ 
-                    width: 12rem; 
-                    &:hover{ 
-                    transform: scale(1.1);
-                    }
-                }
-            }
-        .inicio-hijos-txt-grid{    
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: $color-principal solid 0.1rem;           
-            &:hover{    
-                color: $color-principal;
-            } 
-        }
-    }   
-    }    
-      
-    /*estilos de contacto desktop*/
-    .contacto-contenedor{
-        width: 50rem;
-        .contacto-mapa{
-            display:none;
-        }
-        .contacto-mapa-desktop{
-            display: flex;
-        }
-    }
-    /*estilos del footer desktop*/
-    footer{
-        text-align: left;      
+            margin: 2rem;     
+        }              
     }
 }
-/*fin queries tablet*/
-
 /*MEDIA QUERIES DESKTOP*/
 @media (min-width:992px){ 
     /* ↓↓↓ inicio header desktop ↓↓↓ */
-    header{              
-        /*logo y minimenu*/
+    header{        
         .header-logo-minimenu{   
-            height: 7rem;   
-            /*logo*/                                          
+            height: 7rem;                   
             .header-logo{ 
                 margin-top: 1rem;          
                 img{ 
                     height: 5rem;           
                     margin-left: 6rem;
                 } 
-            } 
-            /*minimenu*/              
+            }                          
             .header-minimenu{              
                 margin-right: 6rem;
                 margin-top: 3.5rem;
-                .header-minimenu-enlace{                                                                
-                    img{   
-                    }  
-                    a{ 
-                    }   
-                }
             }
-        }          
-        /*estilos nav de BT*/
+        }     
         .estilos-nav-bt{
             padding-bottom: 1.5rem;
             padding-top: 1.5rem;
             padding-left: 4.5rem;
-            .container-fluid{
-                .navbar-toggler{
-                    .navbar-toggler-icon{
-                    }
-                }
+            .container-fluid{                
                 #navbarSupportedContent{
                     .navbar-nav{                    
                         .nav-item{ 
-                            padding-right: 0.9rem;                     
-                            .nav-link{                                 
-                                &:hover{                                
-                                }                           
-                            }
+                            padding-right: 0.9rem;                    
                         }
                     }
                 }
@@ -198,15 +92,52 @@
     }
     /* ↑↑↑ fin header desktop ↑↑↑ */
     /* ↓↓↓ inicio main desktop ↓↓↓ */
-    main{  
-        /*main*/    
+    main{     
         .titulo{  
             text-align: left; 
-            margin: 2rem 5rem;    
-            h1{       
-            }    
+            margin: 2rem 5rem;   
+        }  
+        .inicio-portada{    
+            .inicio-portada-img{ 
+                text-align: center;               
+                background-color: $color-secundario;
+                @include bordes-inferiores(0.2rem, solid, $color-principal)
+                a{                      
+                    img{  
+                        width: 80%;  
+                        border: 0;                                  
+                    } 
+                }  
+            }     
+            .inicio-portada-txt{                
+                top: 14.5rem;  
+                a{
+                    h1{      
+                        width: 50%;                                             
+                        font-size: 6rem;   
+                        margin-left: 6rem;             
+                    }                                        
+                }                  
+            }
+            .inicio-portada-animacion{
+                top: 14rem;          
+                margin-left: 6rem;                
+            }
         }
-        /*nosotros*/
+        .inicio-accesos{ 
+            top: -3rem;  
+            flex-direction: row;         
+            column-gap: 2.5rem; 
+            justify-content: center;            
+            /* inicio cards*/    
+            .inicio-card{        
+                a{                       
+                    img{           
+                        height: 17rem;                                      
+                    } 
+                }
+            }
+        }  
         .nosotros-txt-img{            
             display: grid;  
             grid-template-columns: 60% 40%;
@@ -222,32 +153,14 @@
                     }          
                 }
             }
-            #carouselExampleSlidesOnly{     
-                .carousel-inner {   
-                    .carousel-item {
-                        img{
-                        }
-                    }
-                }        
-            }
         }
-        /*productos*/
         .productos-accesos{
             display: grid;  
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);    
-            column-gap: 2rem; 
-            margin: 2rem 5rem;      
-            .productos-card{  
-                &:hover{             
-                }  
-                a{
-                    img{
-                    }
-                    .productos-card-txt{                    
-                    }
-                }
-            }
+            column-gap: 4rem; 
+            margin: 2rem 5rem;     
         }
     }
+    /* ↑↑↑ fin main desktop ↑↑↑ */   
 }

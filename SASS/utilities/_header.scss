@@ -18,14 +18,13 @@ header{
                 height: 3.5rem;
                 margin-left: 1rem;
                 animation: animacion-logo;
-                animation-duration: 0.5s;
+                animation-duration: 1s;
                 position: relative;
                 @keyframes animacion-logo {
-                    0% {bottom: 6rem}
-                    100% {bottom::0}
+                    0% {right: 10rem; opacity: 0%}
+                    100% {right:0; opacity: 100%}
                 }
                 &:hover{
-                    transform: scale(1.025);
                     opacity: 50%;
                 }
             } 
@@ -40,11 +39,11 @@ header{
             margin-right: 1rem;            
             .header-minimenu-enlace{      
                 animation: animacion-iconos;
-                animation-duration: 0.5s;
+                animation-duration: 1s;
                 position: relative; 
                 @keyframes animacion-iconos {
-                    0% {bottom: 6rem; opacity: 5%}
-                    100% {bottom: 0; opacity: 100%}
+                    0% {left: 10rem; opacity: 0%}
+                    100% {left: 0; opacity: 100%}
                 }                                                       
                 img{   
                     height: 0.7rem; 

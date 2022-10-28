@@ -1,60 +1,96 @@
 /*estilos de inicio*/
 main{
-    .inicio-portada{ 
-        display: flex;      
-        flex-wrap: wrap;           
-        a{        
-            background-color: $color-secundario;    
-            text-decoration: none; 
-            img{                
-                width: 100%;                
-            }        
-            .inicio-portada-txt{                
-                background-color: $color-secundario;   
-                position: relative;
-                top: -1rem;                
-                h1{
-                    text-transform: uppercase; 
-                    font-family:Arial, Helvetica, sans-serif;
+    .inicio-portada{  
+        .inicio-portada-img{
+            a{  
+                img{     
+                    width: 100%;                 
+                    @include bordes-inferiores(0.2rem, solid, $color-principal)
+                } 
+            }  
+        }     
+        .inicio-portada-txt{      
+            position: absolute;  
+            top: 10rem;        
+            a{
+                text-decoration: none; 
+                h1{    
+                    letter-spacing: 0.1rem;  
+                    text-transform: uppercase;                    
+                    font-size: 2.5rem;     
+                    font-family: 'Anton', sans-serif;  
                     color: $color-fondo;
-                    font-weight:bolder;
-                    font-size: 2rem;        
-                    text-align: center;                                                     
-                }          
-            }
+                    text-align: left;
+                    margin-left: 1rem;
+                    opacity: 70%;                
+                    animation: animacion-txt-inicio;
+                    animation-duration: 2s; 
+                    opacity: 70%;
+                    @keyframes animacion-txt-inicio{
+                        0% {opacity: 0%}
+                        100% {opacity: 70%}
+                    }
+                }
+            }                  
         }
-    }
+        .inicio-portada-animacion{
+            position: absolute;  
+            top: 9.5rem; 
+            width: 2.5rem;
+            height: 0.05rem;
+            background-color: $color-principal;  
+            margin-left: 1rem;   
+            animation: animacion-barra-inicio;
+            animation-duration: 3s;  
+            animation-iteration-count: infinite;         
+            @keyframes animacion-barra-inicio{
+                0% {left: 0}
+                100% {left: 100%}
+            }  
+        } 
+    }   
     /*inicio accesos*/
-    .inicio-accesos{                      
+    .inicio-accesos{        
+        position: relative;
+        top: -2rem;                    
         display: flex;  
         flex-direction: column;         
         row-gap: 2rem;   
-        margin-bottom: 5rem; /*para que no se mueva footer*/     
+        align-items: center;
+        text-align: center;             
         /* inicio cards*/    
-        .inicio-card{
-            border: 1px solid $color-filetes;            
-            border-radius: 0.5rem;
-            &:hover{
-                transform: scale(1.05);
-                box-shadow: $color-filetes 0px 2px 16px 0px;
-                border:0;                
-            }
-            a{
-                text-decoration: none; 
-                img{            
-                    height: 15rem;
-                    padding: 0.5rem;
+        .inicio-card{                  
+            background-color: $color-fondo;  
+            animation: animacion-inicio;
+            animation-duration: 2s;        
+            @keyframes animacion-inicio{
+                0% {opacity: 5%}
+                100% {opacity: 100%}
+            }            
+            a{                      
+                text-decoration: none;
+                img{  
+                    height: 15rem;   
+                    &:hover{
+                        opacity: 70%;                 
+                    }                                   
                 }
-                .inicio-card-txt{                                      
-                    h3{
-                        @extend %tipografia;                         
-                        font-size: 1.5rem;                        
-                        text-align: center;                                                
-                        padding-bottom: 1rem; 
-                        color: $color-principal;                                               
+                .inicio-card-txt{                      
+                    h2{                            
+                        font-size: 2rem;                         
+                        text-transform: uppercase;  
+                        color: $color-secundario; 
+                        font-family: 'Anton', sans-serif; 
+                        letter-spacing: 0.1rem;                        
+                        @include bordes-inferiores(0.15rem, solid, $color-principal);  
+                        padding-top: 0.6rem;
+                        padding-bottom: 0.25rem; 
+                        &:hover{
+                            opacity: 70%;                 
+                        }                                                                                             
                     }                    
-                }
-            } 
-        }                
-    }    
-}
+                } 
+            }
+        } 
+    }            
+}    
