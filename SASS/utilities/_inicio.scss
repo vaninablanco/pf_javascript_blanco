@@ -1,4 +1,4 @@
-/*estilos de inicio*/
+/*inicio*/
 main{
     .inicio-portada{ 
         margin-top: 8.7rem;        
@@ -50,8 +50,7 @@ main{
                 100% {left: 100%}
             }  
         } 
-    }   
-    /*inicio accesos*/
+    }  
     .inicio-accesos{        
         position: relative;
         top: -2rem;                    
@@ -59,8 +58,7 @@ main{
         flex-direction: column;         
         row-gap: 2rem;   
         align-items: center;
-        text-align: center;             
-        /* inicio cards*/    
+        text-align: center;                
         .inicio-card{                  
             background-color: $color-fondo;  
             animation: animacion-inicio;

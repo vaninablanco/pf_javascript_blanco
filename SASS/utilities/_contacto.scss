@@ -1,48 +1,78 @@
-/*estilos de contacto*/
-.contacto-contenedor{
-    width: 20rem;  
-    .contacto-formulario{  
-        margin-top: 2rem;      
-        padding: 1rem; 
-        background-color: $color-principal;
-        form{
-            ul{
-                li{
-                    list-style-type:none;
-                    label{
-                        font-weight: bolder;
-                        letter-spacing: 0.1rem;
-                        color:$color-fondo;
-                        font-size:medium;
-                    }                      
-                }        
-            }
-        }    
-    }
-    .contacto-direccion{  
-        margin-top: 2rem;
-        ul{
-            li{  
-                list-style-type: none;                         
-                font-weight: bolder;
-                font-size:medium;
-                &:before{
-                    content: "\00BB \0020"; 
-                }     
-                a{
-                    text-decoration: none;
-                    color:$color-principal;
-                }           
-                span{                    
-                    color:$color-principal;                                       
+/*contacto*/
+main{
+    .contacto-form-datos{        
+        display: flex;  
+        flex-direction: column;   
+        align-items: center;
+        text-align: center;        
+        .contacto-form{            
+            color: $color-fondo; 
+            form{  
+                background-color: $color-principal;
+                padding: 1rem 3rem 1rem 1rem ; 
+                width: 90%;  
+                margin-left: 1rem;
+                margin-right: 1rem;     
+                ul{
+                    li{
+                        list-style-type:none;
+                        label{                                  
+                            color:$color-fondo;
+                            font-size:medium;
+                            margin-top: 0.5rem;
+                            text-align: start;
+                        } 
+                        input{   
+                            outline: none;                                                       
+                        }   
+                        textarea{
+                            border: none;  
+                            outline: none;      
+                        }  
+                        button{
+                            background-color: $color-secundario;
+                            border: none;
+                            color: $color-fondo; 
+                            padding: 0.5rem;                             
+                            @extend %tipografia;
+                            margin-top: 1rem;                             
+                            &:hover{
+                                background-color: $color-filetes;  
+                                color: $color-secundario;                              
+                            }   
+                        }                 
+                    }        
                 }
-            }
+            }    
+        }
+        .contacto-datos{ 
+            margin: 1rem 1rem 1rem 1rem;
+            text-align: start;
+            font-size: medium; 
+            
+            span{  
+                font-weight: bold;                  
+                color:$color-principal;                                                          
+            }            
+            a{
+                text-decoration: none;
+                color:$color-principal;
+            }          
         }
     }
-    .contenedor-mapa{
-        margin-top: 2rem; 
+    .contacto-mapa{                 
+        display: flex;             
+        justify-content: center;         
+        iframe{
+            border: 0.15rem solid $color-principal;
+            padding: 0.25rem;
+        }
     }
-    .contacto-mapa-desktop{
-        display:none;
+    .contacto-mapa-tablet{                 
+        display: none;
+    }
+    .contacto-mapa-desktop{                 
+        display: none;
     }
 }
+

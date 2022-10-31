@@ -6,13 +6,11 @@ header{
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 2;              
-    /*logo y minimenu*/
+    z-index: 2;            
     .header-logo-minimenu{        
         display:flex;
         justify-content: center;        
-        height: 5rem;  
-        /*logo*/                                          
+        height: 5rem;                                                   
         .header-logo{ 
             margin-top: 0.75rem; 
             width: 62%;           
@@ -30,8 +28,7 @@ header{
                     opacity: 50%;
                 }
             } 
-        } 
-        /*minimenu*/              
+        }                      
         .header-minimenu{               
             display: flex;   
             flex-direction: column; 
@@ -64,8 +61,7 @@ header{
                 }
             }
         }
-    }              
-    /*estilos nav de BT*/
+    }            
     .estilos-nav-bt{
         @extend %tipografia;
         background-color: $color-principal;     

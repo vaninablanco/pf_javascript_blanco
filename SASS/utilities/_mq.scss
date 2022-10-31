@@ -75,7 +75,21 @@
             column-gap: 2rem; 
             margin: 2rem;    
             justify-items: center; 
-        }             
+        }  
+        .contacto-mapa{                 
+            display:none;
+        }
+        .contacto-mapa-tablet{    
+            display: flex;             
+            justify-content: center;         
+            iframe{
+                border: 0.15rem solid $color-principal;
+                padding: 0.25rem;
+            }
+        }
+        .contacto-mapa-desktop{                 
+            display: none;
+        }           
     }
 }
 /*MEDIA QUERIES DESKTOP*/
@@ -140,7 +154,7 @@
                 @include bordes-inferiores(0.2rem, solid, $color-principal)
                 a{     
                     img{  
-                        width: 80%;  
+                        width: 60%;  
                         border: 0;                                  
                     } 
                 }  
@@ -204,6 +218,83 @@
             column-gap: 4rem; 
             margin: 2rem 5rem;
             justify-items: center;     
+        }
+        .contacto-form-datos{        
+            display: flex;  
+            flex-direction: row;   
+            justify-content: center;  
+            align-items: center;
+            text-align: center;   
+            justify-items: center;          
+            .contacto-form{     
+                margin-left: 4rem;            
+                color: $color-fondo; 
+                form{  
+                    background-color: $color-principal;
+                    padding: 1rem 3rem 1rem 1rem ; 
+                    width: 90%;  
+                    margin-left: 1rem;
+                    margin-right: 1rem;     
+                    ul{
+                        li{
+                            list-style-type:none;
+                            label{                                  
+                                color:$color-fondo;
+                                font-size:medium;
+                                margin-top: 0.5rem;
+                                text-align: start;
+                            } 
+                            input{   
+                                outline: none;                                                       
+                            }   
+                            textarea{
+                                border: none;  
+                                outline: none;      
+                            }  
+                            button{
+                                background-color: $color-secundario;
+                                border: none;
+                                color: $color-fondo; 
+                                padding: 0.5rem;                           
+                                margin-top: 1rem; 
+                                &:hover{
+                                    background-color: $color-filetes;  
+                                    color: $color-secundario;                              
+                                }   
+                            }                 
+                        }        
+                    }
+                }    
+            }
+            .contacto-datos{ 
+                margin: 1rem 1rem 1rem 1rem;
+                text-align: start;
+                font-size: medium; 
+                
+                span{  
+                    font-weight: bold;                  
+                    color:$color-principal;                                                          
+                }            
+                a{
+                    text-decoration: none;
+                    color:$color-principal;
+                }          
+            }
+        }
+        .contacto-mapa{                 
+            display:none;
+        }
+        .contacto-mapa-tablet{                 
+            display:none;
+        }
+        .contacto-mapa-desktop{    
+            display: flex;             
+            justify-content: center; 
+            margin-top: 2rem;        
+            iframe{
+                border: 0.15rem solid $color-principal;
+                padding: 0.25rem;
+            }
         }
     }
 }

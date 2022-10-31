@@ -1,16 +1,14 @@
-/*estilos de servicios*/
+/*servicios*/
 main{
     .servicios-accesos{
         display: flex;  
         flex-direction: column;    
         row-gap: 2rem;     
         align-items: center;     
-        text-align: center;       
-
+        text-align: center;      
         .servicios-card{ 
             background-color: $color-secundario;
-            padding: 0.5rem;
-            border-radius: 0.25rem 0.25rem 0 0;
+            padding: 0.5rem;            
             @include bordes-inferiores(0.2rem, solid, $color-principal);  
             animation: animacion-productos;
             animation-duration: 2s;
