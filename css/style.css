@@ -221,6 +221,14 @@ main .nosotros-txt-img {
       width: 80%; }
 
 /*productos*/
+main .colorBoton {
+  color: white;
+  background-color: #fd7e14; }
+
+main .colorBoton:hover {
+  color: #fd7e14;
+  background-color: white; }
+
 main .productos-accesos {
   display: flex;
   flex-direction: column;

@@ -65,13 +65,13 @@ header{
     .estilos-nav-bt{
         @extend %tipografia;
         background-color: $color-principal;     
-        font-size: 0.8rem; 
-        .container-fluid{
-            .navbar-toggler{               
-                .navbar-toggler-icon{
+        font-size: 0.8rem;
+        .container-fluid{                       
+            .navbar-toggler{                 
+                .navbar-toggler-icon{                  
                 }
             }
-            #navbarSupportedContent{
+            #navbarSupportedContent{                
                 .navbar-nav{                    
                     .nav-item{                        
                         .nav-link{ 

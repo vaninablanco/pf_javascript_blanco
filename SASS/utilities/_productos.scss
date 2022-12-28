@@ -1,5 +1,14 @@
 /*productos*/
 main{
+    .colorBoton {
+        color: white;
+        background-color: #fd7e14;
+    }
+    
+    .colorBoton:hover {
+        color: #fd7e14;
+        background-color: white ;
+    }
     .productos-accesos{
         display: flex;  
         flex-direction: column;    
