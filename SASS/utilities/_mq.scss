@@ -61,13 +61,18 @@
                 }
             }
         }
-        .productos-accesos{
+        #productContainer{           
             display: grid;  
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, 1fr);    
-            column-gap: 2rem; 
-            margin: 2rem;     
+            grid-template-rows: repeat(5, 1fr);                       
+            .card-body{                  
+                height: 100%;                                                                               
+            }
         } 
+        .total{            
+            text-align: left;  
+            padding-left: 1.5rem; 
+        }         
         .servicios-accesos{
             display: grid;  
             grid-template-columns: repeat(2, 1fr);
@@ -125,7 +130,7 @@
             }
         } 
     }
-    /* ↑↑↑ fin header desktop ↑↑↑ */
+    /* ↑↑↑ fin header desktop ↑↑↑ */    
     /* ↓↓↓ inicio main desktop ↓↓↓ */
     main{   
         margin-top: 12rem;   
@@ -204,12 +209,23 @@
                 }
             }
         }
-        .productos-accesos{
+        #productContainer{     
             display: grid;  
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);    
-            column-gap: 4rem; 
-            margin: 2rem 5rem;     
+            grid-template-rows: repeat(3, 1fr);                           
+            .card-body{                                                                             
+            }
+        } 
+        .total{            
+            text-align: left;  
+            padding-left: 1.5rem; 
+        } 
+        #cartContainer{                  
+            .card-body{                            
+                img{
+                    width: 25%;                
+                }        
+            }            
         }
         .servicios-accesos{
             display: grid;  

@@ -1,48 +1,94 @@
 /*productos*/
 main{
-    .colorBoton {
-        color: white;
-        background-color: #fd7e14;
-    }
-    
-    .colorBoton:hover {
-        color: #fd7e14;
-        background-color: white ;
-    }
-    .productos-accesos{
+    #productContainer{        
         display: flex;  
         flex-direction: column;    
-        row-gap: 2rem;  
-        align-items: center;  
-        text-align: center;    
-        @extend %tipografia;            
-        .productos-card{ 
-            @include bordes-inferiores(0.15rem, solid, $color-principal);
-            padding-bottom: 1rem;  
+        row-gap: 2rem;           
+        text-align: center;  
+        margin: 0 2rem;     
+        .card-body{                        
+            padding-bottom: 1.5rem;
+            @include bordes-inferiores(0.15rem, solid, $color-principal)
             animation: animacion-productos;
             animation-duration: 2s;
             position: relative; 
             @keyframes animacion-productos {
                 0% {top: 6rem; opacity: 5%}
                 100% {top: 0; opacity: 100%}
-            }
-            &:hover{
-                transform: scale(1.05);
-                box-shadow: $color-filetes 0px 2px 16px 0px;
-                border: 0;              
-            }  
-            a{
-                color: $color-secundario;
-                text-decoration: none;                
-                img{
-                    height: 11rem;
+            } 
+            .imgProductos{    
+                padding-bottom: 0.5rem;                           
+                &:hover{
+                    transform: scale(1.05);                                     
                 }
-                .productos-card-txt{  
-                    h2{     
-                        font-size: 1.25rem;                   
-                    }                 
-                }
+            }           
+        }
+        .colorBoton {
+            color: $color-fondo;
+            background-color: $color-principal;   
+            border-radius: 0px;                                 
+            &:hover {                
+                background-color: $color-secundario;                                
             }
         }
+    }    
+    h5{
+        color: $color-principal;
+        font-size: small;
+    }    
+    .total{
+        margin: 2rem;
+        text-align: center;   
+        font-size: large;   
+        background-color: $color-principal;  
+        color: $color-fondo;
+        padding: 1rem 0;
+        animation: animacion-productos;
+        animation-duration: 2s;
+        position: relative; 
+        @keyframes animacion-productos {
+            0% {top: 6rem; opacity: 5%}
+            100% {top: 0; opacity: 100%}
+        }
     }
-}  
+    #checkCart, #emptyCart {                
+        color: $color-fondo;
+        background-color: $color-principal;  
+        border-radius: 0px; 
+        margin-left: 2rem;  
+        animation: animacion-productos;
+        animation-duration: 2s;
+        position: relative; 
+        @keyframes animacion-productos {
+            0% {top: 6rem; opacity: 5%}
+            100% {top: 0; opacity: 100%}
+        }
+        &:hover {                
+            background-color: $color-secundario;            
+        }
+    }
+    #cartContainer{ 
+        display: flex;  
+        flex-direction: column;                      
+        text-align: center;  
+        margin: 2rem 2rem 0 2rem;     
+        .card-body{  
+            padding-bottom: 0.75rem;           
+            @include bordes-inferiores(0.1rem, solid, $color-filetes)           
+            h4, p{
+                font-size: small;
+            } 
+            img{
+                width: 50%;            
+            }        
+        }
+        .colorBoton {            
+            color: $color-fondo;
+            background-color: $color-principal;   
+            border-radius: 0px;                                 
+            &:hover {                
+                background-color: $color-secundario;                                
+            }            
+        }
+    }
+}

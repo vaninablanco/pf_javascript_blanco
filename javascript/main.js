@@ -1,141 +1,161 @@
-class Producto { /*clase*/
-    constructor(id, marca, modelo, color, categoria, precio, img) /* contructor + (parametros)*/ {
+// preentrega 3
+
+class Product { //clase, sin métodos xq se van a usar funciones x fuera
+    constructor(id, brand, model, color, category, price, img) /* contructor + (parametros)*/ {
         this.id = id;
-        this.marca = marca;
-        this.modelo = modelo;
+        this.brand = brand;
+        this.model = model;
         this.color = color;
-        this.categoria = categoria;
-        this.precio = precio;
+        this.category = category;
+        this.price = price;
         this.img = img;
+        this.quantity = 1; //x default siempre la cantidad va a ser 1, no se pide por parametros, p evitar dato repetido
     }
 }
 
-const bicicleta1 = new Producto(1, "SBK", "Kansas", "Amarillo", "Mountain Bike", 80000, "../img/productos_bicicleta1.jpg");
-const bicicleta2 = new Producto(2, "SBK", "Chicago", "Rojo", "Mountain Bike", 120000, "../img/productos_bicicleta2.jpg");
-const bicicleta3 = new Producto(3, "Philco", "Duster", "Negro", "Urbana", 105000, "../img/productos_bicicleta3.jpg");
-const bicicleta4 = new Producto(4, "Newton", "Gina", "Rojo", "Mountain Bike", 115000, "../img/productos_bicicleta4.jpg");
-const bicicleta5 = new Producto(5, "Newton", "Elena", "Rosa", "Mountain Bike", 85000, "../img/productos_bicicleta5.jpg");
-const bicicleta6 = new Producto(6, "Stark", "Toscana", "Rojo", "Mountain Bike", 90000, "../img/productos_bicicleta6.jpg");
-const bicicleta7 = new Producto(7, "Stark", "Summer", "Rojo", "Playera", 135000, "../img/productos_bicicleta7.jpg");
-const bicicleta8 = new Producto(8, "Newton", "Ride", "Celeste", "Paseo", 125000, "../img/productos_bicicleta8.jpg");
-const bicicleta9 = new Producto(9, "Stark", "Thunder", "Fucsia", "Mountain Bike", 105000, "../img/productos_bicicleta9.jpg")
+// creación de objetos
+const bicycle1 = new Product(1, "SBK", "Kansas", "Amarillo", "Mountain Bike", 80000, "../img/productos_bicicleta1.jpg");
+const bicycle2 = new Product(2, "SBK", "Chicago", "Rojo", "Mountain Bike", 120000, "../img/productos_bicicleta2.jpg");
+const bicycle3 = new Product(3, "Philco", "Duster", "Negro", "Urbana", 105000, "../img/productos_bicicleta3.jpg");
+const bicycle4 = new Product(4, "Newton", "Gina", "Rojo", "Mountain Bike", 115000, "../img/productos_bicicleta4.jpg");
+const bicycle5 = new Product(5, "Newton", "Elena", "Rosa", "Mountain Bike", 85000, "../img/productos_bicicleta5.jpg");
+const bicycle6 = new Product(6, "Stark", "Toscana", "Rojo", "Mountain Bike", 90000, "../img/productos_bicicleta6.jpg");
+const bicycle7 = new Product(7, "Stark", "Summer", "Rojo", "Playera", 135000, "../img/productos_bicicleta7.jpg");
+const bicycle8 = new Product(8, "Newton", "Ride", "Celeste", "Paseo", 125000, "../img/productos_bicicleta8.jpg");
+const bicycle9 = new Product(9, "Stark", "Thunder", "Fucsia", "Mountain Bike", 105000, "../img/productos_bicicleta9.jpg")
 
 // array con todos los productos
-const productos = [bicicleta1, bicicleta2, bicicleta3, bicicleta4, bicicleta5, bicicleta6, bicicleta7, bicicleta8, bicicleta9]
+const products = [bicycle1, bicycle2, bicycle3, bicycle4, bicycle5, bicycle6, bicycle7, bicycle8, bicycle9]
 
 // array con carrito, inicialmente está vacío
-let carrito = []
+let cart = []
 
-console.log(productos)
+// cargar carrito dsd localStorage
+if (localStorage.getItem("cart")){ // si hay algo en el localStorage
+    cart = JSON.parse(localStorage.getItem("cart")); //entonces el carrito se va a cargar c lo q encuentre, si da falso va a continuar en carrito en vacío
+}
 
-// función p mostrar productos en forma dinamica, se va a usar varias veces
+// función p mostrar productos en forma dinámica, se va a usar varias veces
+const productContainer = document.getElementById("productContainer") // toma div pral del html
 
-const contenedorProductos = document.getElementById("contenedorProductos") // toma div pral
-
-const mostrarProductos = () => { // función flecha que itera sobre array de productos
-    productos.forEach(producto => { // función flecha adentro de productos xq es función de orden superior
+const showProducts = () => { // función flecha que itera sobre array de productos
+    products.forEach(product => { // función flecha adentro de productos xq es función de orden superior
         const card = document.createElement("div");
-        card.classList.add("col-xl-3", "col-md-6", "col-xs-12");
-        card.innerHTML = `
-                        <div> 
-                            <img src = "${producto.img}" class = "card-img-top imgProductos alt = "${producto.marca}">
-                            <div class = "card-body">
-                            <h4> Bicicleta "${producto.marca}" </h4>
-                            <h5> Modelo: "${producto.modelo}" </h5>
-                            <h5> Color: ${producto.color} </h5>
-                            <h6>${producto.categoria} </h5>
-                            <p>Precio: $${producto.precio}</P>
-                            <button class = "btn colorBoton" id="boton${producto.id}">Agregar al carrito</button>
-                            </div>
-                        </div>`
-        contenedorProductos.appendChild(card);
+        //card.classList.add("col-xl-3", "col-md-6", "col-xs-12"); sist grillas Boostrap, no se aplica bien
+        card.innerHTML = ` 
+                        <div class = "card-body">
+                            <img src = "${product.img}" class = "card-img-top imgProductos" alt = "${product.brand}">
+                            <h4> Bicicleta "<b>${product.brand}</b> ${product.model}" </h4>                            
+                            <h5>${product.category.toUpperCase()} </h5>
+                            <p><b>Color:</b> ${product.color} <b>• Precio:</b> $${product.price}</p>
+                            <button class = "btn colorBoton" id="button${product.id/*cada boton va a tener un id diferente, con esto carrito sabe que producto tomar*/}"><img src = "../img/header_mobile_carrito_blanco.png" class="imgCarrito" alt ="Agregar al carrito"></button>
+                        </div>
+                        ` // con esto de arriba se agregó una card en el html
+
+        productContainer.appendChild(card) //le indico donde va la card
+
+        // cada botón tiene id único, c evento agrego productos al carrito
+        const button = document.getElementById(`button${product.id}`)
+        button.addEventListener("click", () => { //evento c función flecha
+            addToCart(product.id)
+        })
     })
 }
 
-mostrarProductos();
+// función agregar al carrito, cdo se suma mismo producto cambia la cantidad, no se pone 2 veces el mismo producto 
+const addToCart = (id) => {
+    const productInCart = cart.find(product => product.id === id) // método q permite verificar si objeto se encuentra en array, es decir si producto ya está en carrito
+    if (productInCart) {
+        productInCart.quantity++; // si el producto ya está en carrito, incrementa la cantidad
+    } else {
+        const product = products.find(product => product.id === id) //si producto no está en carrito, lo pushea (agrega)
+        cart.push(product)
 
+        //localStorage
+        localStorage.setItem("cart", JSON.stringify(cart)); // cada vez q se agregue objeto se pisa el localStorage
 
-
-
-/*// stock con array de objetos
-let products = [
-    { id: 1, brand: "Stark", model: "Thunder", color: "Roja", category: "Mountain Bike", price: 80000, img:},
-    { id: 2, brand: "Stark", model: "Fusion", color: "Violeta", category: "Playera", price: 120000, img:},
-    { id: 3, brand: "Stark", model: "Duster", color: "Negra", category: "Urbana", price: 105000, img:},
-    { id: 4, brand: "Newton", model: "Gina", color: "Violeta", category: "Playera", price: 115000, img:},
-    { id: 5, brand: "Newton", model: "Elena", color: "Naranja", category: "Urbana", price: 85000, img:},
-    { id: 6, brand: "Philco", model: "Toscana", color: "Amarilla", category: "Paseo", price: 90000, img:},
-    { id: 7, brand: "Philco", model: "Battle", color: "Negra", category: "Mountain Bike", price: 135000, img:},
-    { id: 8, brand: "SBK", model: "Kansas", color: "Negra", category: "Paseo", price: 125000, img:},
-    { id: 9, brand: "SBK", model: "Chicago", color: "Verde", category: "Urbana", price: 105000, img:}    
-]
-
-// preentrega 3
-
-let container = document.getElementById("productContainer") // ahora la var "container" es igual al elemento tomado por ID
-console.log(container.innerHTML)
-
-for (const product of products) { // ahora la constante "product" es igual al recorrido del array "products" 
-    container.innerHTML = container.innerHTML + `<div>${product.brand}</div>` // ahora la var "container" va a tener como contenido "brand" del array  
+    }
+    calculateTotal(); //funcion q va sumando total d la compra
 }
 
+showProducts();
 
-/* preentrega 2
-// variables con filtros de búsqueda
-let filterPrice = "• 01 → por Precio"
-let filterModel = "• 02 → por Modelo"
-let filterCategory = "• 03 → por Categoría"
+// mostrar carrito
 
-// pedido de tipo de filtro
-let filter = parseInt(prompt("Bienvenido a 🚲 BICICLETERÍA SCARANO 🚲\n\nPor favor, indique que como desea realizar su búsqueda de bicicleta:\n\n" + filterPrice + "\n" + filterModel  + "\n" + filterCategory));
-console.log(filter)
+const cartContainer = document.getElementById("cartContainer")
+const checkCart = document.getElementById("checkCart")
 
-// declaración de función - si tipean una opción mal
-function escape(){
-    alert("Por favor, presione ESC para volver a las opciones.")
-    console.log("Por favor, presione ESC para volver a las opciones.")    
-}
+checkCart.addEventListener("click", () => { // evento c función flecha
+    showCart();
+})
 
-// aplicación de filtros
-if (filter === 1) { // filtro por precio, se usará "filter", para filtrar los rangos     
-    let amount = parseInt(prompt("Su búsqueda será: " + filterPrice + "\n\nIndique el rango deseado:\n• 01 - $50.000 a $100.000 \n• 02 - $100.000 a $200.000")); 
-    console.log(amount)    
-    if (amount === 1) {         
-        let byPrice = stock.filter(bicycle => bicycle.price < 100000)
-        let message = "Los modelos disponibles en ese rango son: \n\n"
-        for (const bicycle of byPrice) {
-            message = message + "• Bicicleta '" + bicycle.brand + " " + bicycle.model.toUpperCase() + "' " + bicycle.color.toLowerCase() + " - " + bicycle.category + " a $" + bicycle.price + "\n"
-        }
-    console.log(byPrice);
-    alert(message); 
-    }else if (amount === 2){               
-        let byPrice = stock.filter(bicycle => bicycle.price > 100000)
-        let message = "Los modelos disponibles en ese rango son: \n\n"
-        for (const bicycle of byPrice) {
-            message = message + "• Bicicleta '" + bicycle.brand + " " + bicycle.model.toUpperCase() + "' " + bicycle.color.toLowerCase() + " - " + bicycle.category + " a $" + bicycle.price + "\n"
-        }    
-    console.log(byPrice);
-    alert(message);
-    }else{
-        escape()
-    }
-}else if (filter === 2) { // filtro por modelo, se usará "find", por ser un valor único que no se repite     
-    let byModel = prompt("Su búsqueda será: " + filterModel + "\n\nIndique el modelo de bicicleta que desea encontrar:");
-    console.log(byModel)
-    // modelos disponibles para probar en prompt: Thunder, Fusion, Duster, Gina, Elena, Toscana, Battle, Kansas, Chicago y Nevada
-    if (modelSearch = stock.find(bicycle => bicycle.model.trim().toUpperCase() === byModel.trim().toUpperCase())){
-        alert("• El modelo '" + modelSearch.brand + " " + byModel.trim().toUpperCase() + "' " + modelSearch.color + " - " + modelSearch.category + " a $" + modelSearch.price + " está disponible.\n")  
-        console.log(modelSearch)       
-    }else{
-        alert("El modelo '" + byModel.trim().toUpperCase() + "' no está disponible")
-    }
-}else if (filter === 3) {  
-    let message = ""
-    console.log(message)
-    stock.forEach(bicycle => {
-        message = message + " " + bicycle.category + " - '" + bicycle.brand + " " + bicycle.model.toUpperCase() + "'\n"
+// función mostrar carrito
+const showCart = () => {
+    cartContainer.innerHTML = "";// en vacío, p q no se dupliquen productos cuando se pone mostrar carrito, limpia carrito
+    cart.forEach(product => {
+        const card = document.createElement("div");
+        //card.classList.add("col-xl-3", "col-md-6", "col-xs-12"); sist grillas Boostrap, no se aplica bien
+        card.innerHTML = ` 
+                        <div class = "card-body">
+                            <img src = "${product.img}" class = "card-img-top imgProductos" alt = "${product.brand}">
+                            <h4> ${product.brand} ${product.model} • ${product.color} • $${product.price} </h4>                          
+                            <p>Cantidad:<b> ${product.quantity} </b></p> 
+                            <button class = "btn colorBoton" id="eliminar${product.id/*cada boton va a tener un id diferente, con esto carrito sabe que producto tomar*/}">Eliminar</button>
+                        </div>
+                        ` // se agregó cantidad en ver carrito, y se reemplazó botón "Agregar al carrito" por "Eliminar"
+
+        cartContainer.appendChild(card); //le indico donde va la card
+
+        //eliminar productos del carrito
+
+        const button = document.getElementById(`eliminar${product.id}`);
+        button.addEventListener("click", () => {
+            removeFromCart(product.id); //funcion p eliminar
         })
-    alert ("• Los modelos por categoría son:\n\n" + message)
-}else{      
-    escape()
-} */
+    })
+    calculateTotal(); //funcion q va sumando total d la compra
+}
+
+// función q elimina producto d carrito
+
+const removeFromCart = (id) => {
+    const product = cart.find(product => product.id === id); //busca producto cuyo id q sea estrictamente igual al q viene x parametro d la función
+    const index = cart.indexOf(product);
+    cart.splice(index, 1); // le paso indice y la cantidad d veces que quiero eliminar (es decir 1)
+
+    //actualizar carrito dps d eliminar producto
+
+    showCart();
+
+    //localStorage
+    localStorage.setItem("cart", JSON.stringify(cart)); //p cdo eliminamos
+
+}
+
+//vaciar carrito
+
+const emptyCart = document.getElementById("emptyCart")
+
+emptyCart.addEventListener("click", () => {
+    deleteCart(); // función p eliminar carrito
+})
+
+const deleteCart = () => {
+    cart = [];
+    showCart();
+
+     //localStorage
+     localStorage.clear("cart", JSON.stringify(cart)); //p cdo vacianos q elimine todo el storage
+}
+
+// calcula total
+
+const total = document.getElementById("total")
+
+const calculateTotal = () => {
+    let totalShop = 0;
+    cart.forEach(product => {
+        totalShop += product.price * product.quantity;
+    })
+    total.innerHTML = ` $${totalShop}`;
+}

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-header .estilos-nav-bt, main .productos-accesos, main .contacto-form-datos .contacto-form form ul li button {
+header .estilos-nav-bt, main .contacto-form-datos .contacto-form form ul li button {
   font-weight: bold;
   letter-spacing: 0.25rem;
   text-transform: uppercase; }
@@ -221,25 +221,17 @@ main .nosotros-txt-img {
       width: 80%; }
 
 /*productos*/
-main .colorBoton {
-  color: white;
-  background-color: #fd7e14; }
-
-main .colorBoton:hover {
-  color: #fd7e14;
-  background-color: white; }
-
-main .productos-accesos {
+main #productContainer {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  align-items: center;
-  text-align: center; }
-  main .productos-accesos .productos-card {
+  text-align: center;
+  margin: 0 2rem; }
+  main #productContainer .card-body {
+    padding-bottom: 1.5rem;
     border-bottom-width: 0.15rem;
     border-bottom-style: solid;
     border-bottom-color: #FA781A;
-    padding-bottom: 1rem;
     animation: animacion-productos;
     animation-duration: 2s;
     position: relative; }
@@ -251,17 +243,79 @@ main .productos-accesos {
   100% {
     top: 0;
     opacity: 100%; } }
-    main .productos-accesos .productos-card:hover {
-      transform: scale(1.05);
-      box-shadow: silver 0px 2px 16px 0px;
-      border: 0; }
-    main .productos-accesos .productos-card a {
-      color: black;
-      text-decoration: none; }
-      main .productos-accesos .productos-card a img {
-        height: 11rem; }
-      main .productos-accesos .productos-card a .productos-card-txt h2 {
-        font-size: 1.25rem; }
+    main #productContainer .card-body .imgProductos {
+      padding-bottom: 0.5rem; }
+      main #productContainer .card-body .imgProductos:hover {
+        transform: scale(1.05); }
+  main #productContainer .colorBoton {
+    color: white;
+    background-color: #FA781A;
+    border-radius: 0px; }
+    main #productContainer .colorBoton:hover {
+      background-color: black; }
+
+main h5 {
+  color: #FA781A;
+  font-size: small; }
+
+main .total {
+  margin: 2rem;
+  text-align: center;
+  font-size: large;
+  background-color: #FA781A;
+  color: white;
+  padding: 1rem 0;
+  animation: animacion-productos;
+  animation-duration: 2s;
+  position: relative; }
+
+@keyframes animacion-productos {
+  0% {
+    top: 6rem;
+    opacity: 5%; }
+  100% {
+    top: 0;
+    opacity: 100%; } }
+
+main #checkCart, main #emptyCart {
+  color: white;
+  background-color: #FA781A;
+  border-radius: 0px;
+  margin-left: 2rem;
+  animation: animacion-productos;
+  animation-duration: 2s;
+  position: relative; }
+
+@keyframes animacion-productos {
+  0% {
+    top: 6rem;
+    opacity: 5%; }
+  100% {
+    top: 0;
+    opacity: 100%; } }
+  main #checkCart:hover, main #emptyCart:hover {
+    background-color: black; }
+
+main #cartContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem 2rem 0 2rem; }
+  main #cartContainer .card-body {
+    padding-bottom: 0.75rem;
+    border-bottom-width: 0.1rem;
+    border-bottom-style: solid;
+    border-bottom-color: silver; }
+    main #cartContainer .card-body h4, main #cartContainer .card-body p {
+      font-size: small; }
+    main #cartContainer .card-body img {
+      width: 50%; }
+  main #cartContainer .colorBoton {
+    color: white;
+    background-color: #FA781A;
+    border-radius: 0px; }
+    main #cartContainer .colorBoton:hover {
+      background-color: black; }
 
 /*servicios*/
 main .servicios-accesos {
@@ -408,12 +462,15 @@ footer {
     top: -4rem; }
     main .inicio-accesos .inicio-card a img {
       height: 18rem; }
-  main .productos-accesos {
+  main #productContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    column-gap: 2rem;
-    margin: 2rem; }
+    grid-template-rows: repeat(5, 1fr); }
+    main #productContainer .card-body {
+      height: 100%; }
+  main .total {
+    text-align: left;
+    padding-left: 1.5rem; }
   main .servicios-accesos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -506,12 +563,15 @@ footer {
         main .nosotros-txt-img .nosotros-txt p span {
           font-weight: bold;
           color: #FA781A; }
-    main .productos-accesos {
+    main #productContainer {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      column-gap: 4rem;
-      margin: 2rem 5rem; }
+      grid-template-rows: repeat(3, 1fr); }
+    main .total {
+      text-align: left;
+      padding-left: 1.5rem; }
+    main #cartContainer .card-body img {
+      width: 25%; }
     main .servicios-accesos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
