@@ -32,7 +32,7 @@ main{
             }
         }
     }    
-    h5{
+    h4{
         color: $color-principal;
         font-size: small;
     }    
@@ -75,7 +75,7 @@ main{
         .card-body{  
             padding-bottom: 0.75rem;           
             @include bordes-inferiores(0.1rem, solid, $color-filetes)           
-            h4, p{
+            h3, p{
                 font-size: small;
             } 
             img{
@@ -90,5 +90,8 @@ main{
                 background-color: $color-secundario;                                
             }            
         }
-    }
+    } 
+    #usdContainer{
+    margin: 2rem 2rem 0 2rem;  
+    } 
 }

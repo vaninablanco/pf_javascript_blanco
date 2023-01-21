@@ -254,7 +254,7 @@ main #productContainer {
     main #productContainer .colorBoton:hover {
       background-color: black; }
 
-main h5 {
+main h4 {
   color: #FA781A;
   font-size: small; }
 
@@ -306,7 +306,7 @@ main #cartContainer {
     border-bottom-width: 0.1rem;
     border-bottom-style: solid;
     border-bottom-color: silver; }
-    main #cartContainer .card-body h4, main #cartContainer .card-body p {
+    main #cartContainer .card-body h3, main #cartContainer .card-body p {
       font-size: small; }
     main #cartContainer .card-body img {
       width: 50%; }
@@ -316,6 +316,9 @@ main #cartContainer {
     border-radius: 0px; }
     main #cartContainer .colorBoton:hover {
       background-color: black; }
+
+main #usdContainer {
+  margin: 2rem 2rem 0 2rem; }
 
 /*servicios*/
 main .servicios-accesos {

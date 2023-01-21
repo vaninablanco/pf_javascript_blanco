@@ -45,8 +45,8 @@ const showProducts = () => { // función flecha que itera sobre array de product
         card.innerHTML = ` 
                         <div class = "card-body">
                             <img src = "${product.img}" class = "card-img-top imgProductos" alt = "${product.brand}">
-                            <h4> Bicicleta "<b>${product.brand}</b> ${product.model}" </h4>                            
-                            <h5>${product.category.toUpperCase()} </h5>
+                            <h3> Bicicleta "<b>${product.brand}</b> ${product.model}" </h3>                            
+                            <h4>${product.category.toUpperCase()} </h4>
                             <p><b>Color:</b> ${product.color} <b>• Precio:</b> $${product.price}</p>
                             <button class = "btn colorBoton" id="button${product.id/*cada boton va a tener un id diferente, con esto carrito sabe que producto tomar*/}"><img src = "../img/header_mobile_carrito_blanco.png" class="imgCarrito" alt ="Agregar al carrito"></button>
                         </div>
@@ -106,7 +106,7 @@ const showCart = () => {
 
         cartContainer.appendChild(card); //le indico donde va la card
 
-        //eliminar productos del carrito
+                //eliminar productos del carrito
 
         const button = document.getElementById(`eliminar${product.id}`);
         button.addEventListener("click", () => {
@@ -122,6 +122,16 @@ const removeFromCart = (id) => {
     const product = cart.find(product => product.id === id); //busca producto cuyo id q sea estrictamente igual al q viene x parametro d la función
     const index = cart.indexOf(product);
     cart.splice(index, 1); // le paso indice y la cantidad d veces que quiero eliminar (es decir 1)
+
+    // sweet alert eliminar producto de carrito
+    Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Producto eliminado',
+        showConfirmButton: false,
+        color: 'black',
+        timer: 1500
+    })
 
     //actualizar carrito dps d eliminar producto
 
@@ -144,6 +154,16 @@ const deleteCart = () => {
     cart = [];
     showCart();
 
+    // sweet alert carrito vacío
+    Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Carrito vacío',
+        showConfirmButton: false,
+        color: 'black',
+        timer: 1500
+    })
+
      //localStorage
      localStorage.clear("cart", JSON.stringify(cart)); //p cdo vacianos q elimine todo el storage
 }
@@ -159,3 +179,21 @@ const calculateTotal = () => {
     })
     total.innerHTML = ` $${totalShop}`;
 }
+
+// fetch cotizacion usd
+
+const usd = "https://criptoya.com/api/dolar";
+const usdContainer = document.getElementById("usdContainer");
+
+setInterval( () => {
+    fetch(usd)
+    .then(response => response.json())
+    .then(({blue, ccb, ccl, mep, oficial, solidario}) => {
+        usdContainer.innerHTML=`
+        <h5><b>• Dólar:</b></h5>
+        <p>•<b> BNA:</b> ${oficial} • <b>Solidario:</b> ${solidario} • <b>MEP Cdo:</b> ${mep} • <b>Cdo c/ liq:</b> ${ccl} • <b>CCB:</b> ${ccb} • <b>Blue: ${blue}</b>      
+        `
+    })
+    .catch(error => console.log(error))
+}, 3000)
+
